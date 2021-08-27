@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('connect.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
