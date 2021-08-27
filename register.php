@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,28 +10,26 @@
 
 </head> 
 <body>
-    <form action="connect.php" method="post">
+    <form method="post" action="register.php">
         <h1>Sign Up</h1>
 
         <p>Please fill this form to create an account</p>
-
         <label>Username</label>
-        <input type="text" placeholder="Username" id="username" name="username" required/><br><br>
-        
+        <input type="text" placeholder="Username" id="username" name="username"/>
+        <br />
         <label>Email</label>
-        <input type="email" placeholder="Email" id="email" name="email" required/><br><br>
-        
+        <input type="text" placeholder="Email" id="email" name="email"/>
+        <br />
         <label>Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" required/><br><br>
-        
+        <input type="text" placeholder="Password" id="password" name="password_1"/>
+        <br />
         <label>Confirm Password</label>
-        <input type="password" placeholder="Re-Password" id="repassword" name="repassword" required/><br><br>
-        
-        <p>By creating an account you agree to our <a href="#">Terms and Privacy </a></p>
-        
-        <button class="btn btn-primary active">Sign Up</button>
+        <input type="text" placeholder="Re-Password" id="password_2" name="password_2"/>
 
-        <p>Already have an account? <a href="login.html">Log In</a></p>
+        <p>By creating an account you agree to our <a href="#">Terms and Privacy </a></p>
+
+        <button type="submit" name = "signup-btn" class="btn btn-primary active">Sign Up</button>
+        <p>Already have an account? <a href="login.php">Log In</a></p>
     </form>
 </body>
 </html>
