@@ -310,21 +310,21 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sauce dookki.png" alt="Sauce dookki" width="400" height="300">
-        <p><strong>sauce dookki</strong></p>
+        <img src="saucedookki.png" alt="Sauce dookki" width="100" height="50">
+        <p><strong>Sauce dookki</strong></p>
         <p>Dookki original sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sauce bbq.png" alt="Sauce BBQ" width="400" height="300">
+        <img src="saucebbq.png" alt="Sauce BBQ" width="100" height="50">
         <p><strong>Sauce BBQ</strong></p>
         <p>Based on barbecue on soy sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sauce jajang.png" alt="Sauce Jajang" width="400" height="300">
+        <img src="saucejajang.png" alt="Sauce Jajang" width="100" height="50">
         <p><strong>Sauce Jajang</strong></p>
         <p>Sweet Jajang sauce </p>
       </div>
