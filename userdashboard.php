@@ -303,30 +303,30 @@
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
+<!-- Container (Menu Section) -->
+<div id="Menu" class="container-fluid text-center bg-grey">
+  <h2>Menu</h2><br>
+  <h4>What we serve</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <img src="sauce dookki.png" alt="Sauce dookki" width="400" height="300">
+        <p><strong>sauce dookki</strong></p>
+        <p>Dookki original sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
+        <img src="sauce bbq.png" alt="Sauce BBQ" width="400" height="300">
+        <p><strong>Sauce BBQ</strong></p>
+        <p>Based on barbecue on soy sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
+        <img src="sauce jajang.png" alt="Sauce Jajang" width="400" height="300">
+        <p><strong>Sauce Jajang</strong></p>
+        <p>Sweet Jajang sauce </p>
       </div>
     </div>
   </div><br>
