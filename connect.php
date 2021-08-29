@@ -50,7 +50,7 @@ if (isset($_POST['signup-btn'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
   	
-  	header('location: menu.php');
+  	header('location: GuestDashboard.php');
   }
 }
 
@@ -73,7 +73,7 @@ if (isset($_POST['login-btn'])) {
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
 
-  	  header('location: menu.php');
+  	  header('location: GuesrDashboard.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
