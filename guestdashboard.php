@@ -59,7 +59,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="guessdashboard.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#">Feedback</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
 
@@ -78,11 +78,11 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1>Welcome to Dookki</h1>
+      <p>bla bla bla</p>
       <hr>
       <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      <p>acad sem</p>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
