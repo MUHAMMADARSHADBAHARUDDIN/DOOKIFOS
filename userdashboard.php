@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
+ 
+  <title>Dookki Malaysia Official</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -190,6 +190,12 @@
       font-size: 150px;
     }
   }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -202,14 +208,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" href="#myPage">HOME</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">MENU</a></li>
-        <li><a href="#pricing">FEEDBACK</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#feedback">FEEDBACK</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li><a href="#profile">PROFILE</a></li>
       </ul>
@@ -218,20 +224,13 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <h1>DOOKKI®</h1> 
+  <h1>DOOKKI MALAYSIA®</h1> 
   <p>Malto sem</p> 
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div>
-    </div>
-  </form>
+ 
 </div>
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<div id="aboutus" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>DOOKKI PAGE ABOUT</h2><br>
@@ -240,7 +239,7 @@
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+      <img src="dookkilogo.png">
     </div>
   </div>
 </div>
@@ -252,86 +251,83 @@
     </div>
     <div class="col-sm-8">
       <h2>About Us</h2><br>
-      <h4>Dookki means 'Two Meals' in Korean.It is a successful dining concept originating from the Republic of South Korea.Topokki, literally translated as "rice cake" is a beloved Korean dish which comes in many variations and has a rich history.
-          With an unlimited supply of ingredients from the self serve bar, you can enjoy endless amounts of
-          topokki prepared in various way. At Dookki, diners have fun creating their own unique recipes with friends and family.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+      <h4>Dookki means <strong>'Two Meals'</strong> in Korean.It is a successful dining concept originating from the Republic of South Korea. Topokki, literally translated as <strong>"rice cake"</strong> is a beloved Korean dish which comes in many variations and has a rich history.
+           With an unlimited supply of ingredients from the self serve bar, you can enjoy endless amounts of topokki prepared in various way. At Dookki, diners have fun creating their own unique recipes with friends and family.</h4><br>
+      <p><strong>VISION:</strong> Our vision is blablabla</p>
   </div>
 </div>
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
   <h2>SERVICES</h2>
-  <h4>What we offer</h4>
+  <h4>Your satisfaction is our top priority</h4>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <span class="glyphicon glyphicon-ok logo-small"></span>
+      <h4>EASY</h4>
+      <p>Easy for you to make an order</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-heart logo-small"></span>
       <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <p>We take care of you with care & love</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <span class="glyphicon glyphicon-calendar logo-small"></span>
+      <h4>FAST</h4>
+      <p>We won't keep you waiting long</p>
     </div>
   </div>
   <br><br>
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <h4>FRESH</h4>
+      <p>All of our food stock are all 100% fresh</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-certificate logo-small"></span>
       <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <p>blablabla</p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <p>We work hard to make you smile</p>
     </div>
   </div>
 </div>
 
 <!-- Container (Menu Section) -->
-<div id="Menu" class="container-fluid text-center bg-grey">
+<div id="menu" class="container-fluid text-center bg-grey">
   <h2>Menu</h2><br>
   <h4>What we serve</h4>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucedookki.png" alt="Sauce dookki" width="100" height="50">
+        <img src="saucedookki.png" alt="Sauce dookki">
         <p><strong>Sauce dookki</strong></p>
         <p>Dookki original sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucebbq.png" alt="Sauce BBQ" width="100" height="50">
+        <img src="saucebbq.png" alt="Sauce BBQ">
         <p><strong>Sauce BBQ</strong></p>
         <p>Based on barbecue on soy sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucejajang.png" alt="Sauce Jajang" width="100" height="50">
+        <img src="saucejajang.png" alt="Sauce Jajang">
         <p><strong>Sauce Jajang</strong></p>
         <p>Sweet Jajang sauce </p>
       </div>
     </div>
   </div><br>
   
-  <h2>What our customers say</h2>
+  <h2>Promotions</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -343,13 +339,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>Buy 1 Free 1<br><span>Available until 9 September 2021</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        <h4>Buy 2 Free 2<br><span>Available until 3 September 2021</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>Buy 5 Get 5...bankrup aku nnti<br><span>Available until 10 September 2021</span></h4>
       </div>
     </div>
 
@@ -365,67 +361,52 @@
   </div>
 </div>
 
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
+<!-- Container (Feedback Section) -->
+<div id="feedback" class="container-fluid">
   <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
+    <h2>Feedbacks</h2>
+    <h4>This is what our customers think</h4>
   </div>
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>Ali bin Ahmad</h1>
+          <h2>"Easy and Fast services"</h2>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p>I basically shocked by how fast their services...I got my order 15 minute right after i make the order and my house is like about 4km away from their restauraant</p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3><strong>19 August 2021<strong></h3>
         </div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+        <h1>Ahmad bin Abu</h1>
+          <h2>"Easy to make payment"</h2>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p>In just a blink of eye, i can completely make a purchase for my order...Thanks Dookki kipidup...dongibap...nanti aku beli lagi...pkp ni boss xdek keje...dookki ade keje kosong x?</p>
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3><strong>23 August 2021<strong></h3>
         </div>
       </div>      
     </div>       
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Premium</h1>
+        <h1>Abu bin Atang</h1>
+          <h2>"High Standard Food Services"</h2>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p>Normally the food that i ordered online will be not same like in the menu image but not for this restauraant...i got exactly like in the image...awesome dookkki</p>
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3><strong>27 August 2021<strong></h3>
         </div>
       </div>      
     </div>    
@@ -438,8 +419,8 @@
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> IOI City Mall, Putrajaya</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +607-276 1156</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Dookki,IOI City Mall, Putrajaya</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +603-8685-4439</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
     <div class="col-sm-7 slideanim">
@@ -462,13 +443,13 @@
 </div>
 
 <!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+<img src="dookkirestaurant.jpg" class="center">
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>COPYRIGHT (C) 2016 DOOKKI. CO., LTD. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <script>
