@@ -1,31 +1,54 @@
-﻿<?php include('connect.php') ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>LogIn page</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-</head>
+﻿<?php include "header.php"; ?> 
 <body>
-    <form method="post" action="login.php">
-       <?php include('errors.php'); ?>
-        <h1>LogIn</h1>
+	
+	<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Login </h1>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        
-        <hr />
-        <label>Username</label>
-        <input type="text" placeholder="Username" id="username" name="username" />
-        <br />
-        <label>Password</label>
-        <input type="text" placeholder="Password" id="password" name="password" />
-        <br />
-        
+	<div class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					
+				</div>
+			</div>
 
-        <button type="submit" name = "login-btn" class="btn btn-primary active">Sign Up</button>
-        <p>Did not have an account? <a href="register.php">Sign Up</a></p>
-    </form>
-</body>
-</html>
+			<div class="row">
+				<div class="col-lg-12">
+<form action="loginck.php" method="post">
+
+  <table border="0" align="center" cellpadding="5" cellspacing="7">
+	
+	        <tr align="right">	
+		     <td> <img src="Login.png" style="width: 30%"> <br>
+		      <a href="registration.php"> New User?</a></td>
+		 </tr>
+		<tr>
+             <td> enter your user id </td>
+        <td> <input type="text" name="uid" placeholder="Enter Your User ID" style="padding: 10px; width: 150%"> <br>  </td>
+		
+		</tr>
+
+		<tr>
+           <td> enter your password</td>
+ <td> <input type="Password" name="pass" placeholder="Enter Your Password" style="padding: 10px; width: 150%"> <br>   </td>
+		
+		</tr>
+
+		<tr>	    
+ <td align="right"> <input type="submit" name="" value="Login Now" style="color: red; background-color: lightgreen; font-size: 1.5em; font-family: times new roman;"> </td> 
+</tr>
+                            
+</form>
+		</table>			
+				</div>
+			</div>		
+		</div>
+	</div>
+<?php include "footer.php"; ?>
