@@ -239,7 +239,7 @@
       <br><button class="btn btn-default btn-lg">Get in Touch</button>
     </div>
     <div class="col-sm-4">
-      <img src="dookkilogo.png">
+      <img src="images/dookkilogo.png">
     </div>
   </div>
 </div>
@@ -247,7 +247,7 @@
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-    <img src="dookkiioi.jpeg" alt="Dookki" width="500" height="400">
+    <img src="images/dookkiioi.jpeg" alt="Dookki" width="500" height="400">
     </div>
     <div class="col-sm-8">
       <h2>About Us</h2><br>
@@ -306,21 +306,21 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucedookki.png" alt="Sauce dookki">
+        <img src="images/saucedookki.png" alt="Sauce dookki">
         <p><strong>Sauce dookki</strong></p>
         <p>Dookki original sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucebbq.png" alt="Sauce BBQ">
+        <img src="images/saucebbq.png" alt="Sauce BBQ">
         <p><strong>Sauce BBQ</strong></p>
         <p>Based on barbecue on soy sauce</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="saucejajang.png" alt="Sauce Jajang">
+        <img src="images/saucejajang.png" alt="Sauce Jajang" width="80%">
         <p><strong>Sauce Jajang</strong></p>
         <p>Sweet Jajang sauce </p>
       </div>
@@ -443,13 +443,13 @@
 </div>
 
 <!-- Image of location/map -->
-<img src="dookkirestaurant.jpg" class="center">
+<img src="images/dookkirestaurant.jpg" class="center">
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>COPYRIGHT (C) 2016 DOOKKI. CO., LTD. ALL RIGHTS RESERVED.</p>
+  <p>&#169 COPYRIGHT (C) 2016 DOOKKI. CO. LTD. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <script>
