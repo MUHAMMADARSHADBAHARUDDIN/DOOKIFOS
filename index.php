@@ -8,9 +8,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Maher Kathiyawadi Restaurant</strong></h1>
+							<h1 class="m-b-20"><strong>Welcome To <br> DOOKI MALAYSIA</strong></h1>
 							<p class="m-b-40">Have It Your Way,   <br> 
-							World's Greatest Hamburgers</p>
+							Among the best korean food in Malaysia</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Food Menu</a></p>
 						</div>
 					</div>
@@ -22,8 +22,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<h1 class="m-b-20"><strong>We like  <br> to eat well.</strong></h1>
-							<p class="m-b-40">Maher Kathiyawadi Restaurant is serving a Authentic Kathiyawadi Food.And Restaurant's 
-<br> 
+							<p class="m-b-40">Dookki Malaysia Restaurant is serving a Authentic Variety Korean Food.And Restaurant's <br> 
 							Ambience is a very good with well trained staff with open kitchen concept...</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Contact Us</a></p>
 						</div>
@@ -35,7 +34,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> Yamifood with Maher</strong></h1>
+							<h1 class="m-b-20"><strong>Welcome To <br> KoreanFood with Arshad</strong></h1>
 							<p class="m-b-40">Deliciousness jumping into the mouth<br> 
 							We know our food..</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Feedback</a></p>
@@ -55,12 +54,10 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 					<div class="inner-column">
-						<h1>Welcome To <span>Maher Kathiyawadi Restaurant</span></h1>
+						<h1>Welcome To <span>Dookki Malaysia Restaurant</span></h1>
 						<h4>Little Story</h4>
-						<p>Restaurants in Ahmedabad, Ahmedabad Restaurants, Bopal restaurants, Best Bopal restaurants, West Ahmedabad restaurants, Gujarati Restaurants in Ahmedabad, Gujarati near me, Gujarati Restaurants in West Ahmedabad, 
-Gujarati Restaurants in Bopal, 
- </p>
-						<p>Quick Bites in Ahmedabad, Quick Bites near me, Quick Bites in West Ahmedabad, Quick Bites in Bopal, in Ahmedabad, near me, in West Ahmedabad, in Bopal, in Ahmedabad, near me, in West Ahmedabad, in Bopal, New Year Parties in Ahmedabad, Christmas' Special in Ahmedabad,</p>
+						<p>Restaurant in Putrajaya, Wilayah Persekutuan Kuala Lumpur </p>
+						<p>Quick Bites in Putrajaya, dabad, No phrase "Try once", if u just have a bite, u will guarantee to have it your entire life</p>
 						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Contact Us</a>
 					</div>
 				</div>
@@ -99,9 +96,9 @@ Gujarati Restaurants in Bopal,
 				<div class="col-3">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">All</a>
-						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">KathiyaWadi</a>
-						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">RajsThani</</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Rise</a>
+						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meals</a>
+						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Sauces</</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Drinks</a>
 
 						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">tava</a>
 					</div>
@@ -238,7 +235,7 @@ Gujarati Restaurants in Bopal,
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
 						<h2>Gallery</h2>
-						<p>Delicious food Pictures for Maher Restaurent Listed Here </p>
+						<p>Delicious food Pictures for Dookki Malaysia Restaurant Listed Here </p>
 					</div>
 				</div>
 			</div>
@@ -271,7 +268,7 @@ Gujarati Restaurants in Bopal,
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Customer Reviews</h2>
+						<h2>Customer Feedbacks</h2>
 						<p>"if you build a greater experience, customer tell each other about that, word of mouth is very powerful"</p>
 					</div>
 				</div>
@@ -302,7 +299,7 @@ Gujarati Restaurants in Bopal,
 								<div class="img-box p-1 border rounded-circle m-auto">
 									<img class="d-block w-100 rounded-circle" src="images/quotations-button.png" alt="">
 								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Nilkanth</strong></h5>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Malto</strong></h5>
 								<h6 class="text-dark m-0">Feedback : Good</h6>
 								<p class="m-0 pt-3">
 									Good Food, Good Health
