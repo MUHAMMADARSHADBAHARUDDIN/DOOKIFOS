@@ -1,5 +1,6 @@
 <?php session_start();
 
+
 $u = $_POST['uid'];
 $p = $_POST['pass'];
 include  "connect.php";
