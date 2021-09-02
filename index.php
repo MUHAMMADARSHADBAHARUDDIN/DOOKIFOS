@@ -12,7 +12,7 @@
 							<h1 class="m-b-20"><strong>Welcome To <br> DOOKKI MALAYSIA</strong></h1>
 							<p class="m-b-40">Have It Your Way,   <br> 
 							Among the best jorean food in Malaysia</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Food Menu</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="menu.php">Food Menu</a></p>
 						</div>
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 							<h1 class="m-b-20"><strong>We like  <br> to eat well.</strong></h1>
 							<p class="m-b-40">Dookki Malaysia Restaurant is serving a Authentic Variety Korean Food.And Restaurant's <br> 
 							Ambience is a very good with well trained staff with open kitchen concept...</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Contact Us</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="contact.php">Contact Us</a></p>
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 							<h1 class="m-b-20"><strong>Welcome To <br> KoreanFood with Arshad</strong></h1>
 							<p class="m-b-40">Deliciousness jumping into the mouth<br> 
 							We know our food..</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Review</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="review.php">Feedback</a></p>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 						<h4>Little Story</h4>
 						<p>Restaurant in Putrajaya, Wilayah Persekutuan Kuala Lumpur </p>
 						<p>Quick Bites in Putrajaya, dabad, No phrase "Try once", just have a bite and u will guarantee to have it your entire life</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Contact Us</a>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="contact.php">Contact Us</a>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12">
@@ -87,157 +87,6 @@
 	</div>
 	<!-- End QT -->
 	
-	<!-- Start Menu -->
-	<div class="menu-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Special Menu</h2>
-						<p>Enjoy the new Tasty</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row inner-menu-box">
-				<div class="col-3">
-					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">All</a>
-						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meals</a>
-						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Sauces</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Drink<a>
-						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">Dessert<a>
-					</div>
-				</div>
-				
-				<div class="col-9">
-					<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							<div class="row">
-								<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu");
-								while($r = mysqli_fetch_array($s))
-								{	
-								?>
-								<div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
-										<div class="why-text">
-											<h4><?php echo $r['title']; ?></h4>
-											<p><?php echo $r['description']; ?></p>
-											<p>Rs <?php echo $r['price']; ?> /-</p>
-											<h5 align="center">
-									<?php if(isset($_SESSION['uid']))
-									{
-									?>
-											<a href="addcart.php?pid=<?php echo $r['id']; ?>&uid=<?php echo $_SESSION['uid']; ?>&price=<?php echo $r['price']; ?>">Add Cart</a></h5>
-
-									<?php
-									}
-									else
-									{
-									?>
-										<a href="login.php">Add Cart</a>
-									<?php } ?>
-
-										</div>
-									</div>
-								</div>
-								<?php } ?>
-							</div>	
-						</div>
-
-
-						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-							<div class="row">
-
-
-							<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='kathiyawadi'");
-								while($r = mysqli_fetch_array($s))
-								{	
-								?>
-
-								<div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
-										<div class="why-text">
-											<h4><?php echo $r['title']; ?></h4>
-											<p><?php echo $r['description']; ?></p>
-											<h5>Rs <?php echo $r['price']; ?> /-</h5>
-											<h5 align="center">
-												<?php if(isset($_SESSION['uid']))
-									{
-									?>
-											<a href="addcart.php?pid=<?php echo $r['id']; ?>&uid=<?php echo $_SESSION['uid']; ?>&price=<?php echo $r['price']; ?>">Add Cart</a></h5>
-
-									<?php
-									}
-									else
-									{
-									?>
-										<a href="login.php">Add Cart</a>
-									<?php } ?>
-
-
-
-
-											</h5>
-										</div>
-									</div>
-								</div>
-								<?php } ?>
-								
-								
-							</div>
-							
-						</div>
-						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-							<div class="row">
-								
-								<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='rajsthani'");
-								while($r = mysqli_fetch_array($s))
-								{	
-								?>
-								<div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
-										<div class="why-text">
-											<h4><?php echo $r['title']; ?></h4>
-											<p><?php echo $r['description']; ?></p>
-											<h5>Rs <?php echo $r['price']; ?> /-</h5>
-											<h5 align="center">
-												<?php if(isset($_SESSION['uid']))
-									{
-									?>
-											<a href="addcart.php?pid=<?php echo $r['id']; ?>&uid=<?php echo $_SESSION['uid']; ?>&price=<?php echo $r['price']; ?>">Add Cart</a></h5>
-
-									<?php
-									}
-									else
-									{
-									?>
-										<a href="login.php">Add Cart</a>
-									<?php } ?>
-
-
-											</h5>
-										</div>
-									</div>
-								</div>
-								<?php } ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-							
-
-			
-	<!-- End Menu -->
 	
 	<!-- Start Gallery -->
 	<div class="gallery-box">
