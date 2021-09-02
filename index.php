@@ -57,7 +57,7 @@
 						<h1>Welcome To <span>Dookki Malaysia Restaurant</span></h1>
 						<h4>Little Story</h4>
 						<p>Restaurant in Putrajaya, Wilayah Persekutuan Kuala Lumpur </p>
-						<p>Quick Bites in Putrajaya, dabad, No phrase "Try once", if u just have a bite, u will guarantee to have it your entire life</p>
+						<p>Quick Bites in Putrajaya, dabad, No phrase "Try once", just have a bite and u will guarantee to have it your entire life</p>
 						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Contact Us</a>
 					</div>
 				</div>
@@ -99,8 +99,7 @@
 						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meals</a>
 						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Sauces</</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Drinks</a>
-
-						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">tava</a>
+						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">Dessert</a>
 					</div>
 				</div>
 				
