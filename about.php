@@ -22,7 +22,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="inner-pt">
-						<p> Making way for a hearty meal is Dookki Malaysia in Putrajaya. This place is synonymous with delicious food that can satiate all food cravings. It is home to some of the most appreciated cuisines. So as to be able to cater to a large number of diners, it occupies a favourable location at Putrajaya.</p>
+						<p>Making way for a hearty meal is Dookki Malaysia in Putrajaya. This place is synonymous with delicious food that can satiate all food cravings. It is home to some of the most appreciated cuisines. So as to be able to cater to a large number of diners, it occupies a favourable location at Putrajaya.</p>
 						<p>Dookki Malaysia at Putrajaya makes sure one has a great food experience by offering highly palatable food. The restaurant welcomes guests from 11:30 AM - 10:00 PM allowing diners to relish a scrumptious meal between the functional hours.</p>
 					</div>
 				</div>
