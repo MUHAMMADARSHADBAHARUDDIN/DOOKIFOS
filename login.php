@@ -1,6 +1,7 @@
-﻿<?php include "header.php"; ?> 
+<?php include "header.php"; ?> 
 <body>
 	
+	<!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
 			<div class="row">
@@ -10,7 +11,10 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- End All Pages -->
+	
+	<!-- Start Contact -->
+	
 	<div class="contact-box">
 		<div class="container">
 			<div class="row">
@@ -44,11 +48,18 @@
 		<tr>	    
  <td align="right"> <input type="submit" name="" value="Login Now" style="color: red; background-color: lightgreen; font-size: 1.5em; font-family: times new roman;"> </td> 
 </tr>
-                            
+               
+              
 </form>
 		</table>			
+
+
+
+
 				</div>
-			</div>		
+			</div>
+		
 		</div>
 	</div>
+	<!-- End Contact -->
 <?php include "footer.php"; ?>
