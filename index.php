@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php include "header.php"; ?>	
+	<!-- Start slides -->
 	<br>
 	<div id="slides" class="cover-slides">
 		<ul class="slides-container">
@@ -8,9 +9,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Welcome To <br> DOOKI MALAYSIA</strong></h1>
+							<h1 class="m-b-20"><strong>Welcome To <br> DOOKKI MALAYSIA</strong></h1>
 							<p class="m-b-40">Have It Your Way,   <br> 
-							Among the best korean food in Malaysia</p>
+							Among the best jorean food in Malaysia</p>
 							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Food Menu</a></p>
 						</div>
 					</div>
@@ -37,7 +38,7 @@
 							<h1 class="m-b-20"><strong>Welcome To <br> KoreanFood with Arshad</strong></h1>
 							<p class="m-b-40">Deliciousness jumping into the mouth<br> 
 							We know our food..</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Feedback</a></p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Review</a></p>
 						</div>
 					</div>
 				</div>
@@ -48,13 +49,15 @@
 			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 		</div>
 	</div>
-
+	<!-- End slides -->
+	
+	<!-- Start About -->
 	<div class="about-section-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 					<div class="inner-column">
-						<h1>Welcome To <span>Dookki Malaysia Restaurant</span></h1>
+						<h1>Welcome To <span>DOOKKI MALAYSIA</span></h1>
 						<h4>Little Story</h4>
 						<p>Restaurant in Putrajaya, Wilayah Persekutuan Kuala Lumpur </p>
 						<p>Quick Bites in Putrajaya, dabad, No phrase "Try once", just have a bite and u will guarantee to have it your entire life</p>
@@ -67,7 +70,9 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- End About -->
+	
+	<!-- Start QT -->
 	<div class="qt-box qt-background">
 		<div class="container">
 			<div class="row">
@@ -80,7 +85,9 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- End QT -->
+	
+	<!-- Start Menu -->
 	<div class="menu-box">
 		<div class="container">
 			<div class="row">
@@ -98,8 +105,8 @@
 						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">All</a>
 						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meals</a>
 						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Sauces</</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Drinks</a>
-						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">Dessert</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Drinks/a>
+						<a class="nav-link" id="v-pills-tava-tab" data-toggle="pill" href="#v-pills-tava" role="tab" aria-controls="v-pills-tava" aria-selected="false">Dessert/a>
 					</div>
 				</div>
 				
@@ -227,14 +234,19 @@
 			</div>
 		</div>
 	</div>
+							
 
+			
+	<!-- End Menu -->
+	
+	<!-- Start Gallery -->
 	<div class="gallery-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
 						<h2>Gallery</h2>
-						<p>Delicious food Pictures for Dookki Malaysia Restaurant Listed Here </p>
+						<p>Delicious food Pictures for Dookki Malaysia Listed Here </p>
 					</div>
 				</div>
 			</div>
@@ -261,7 +273,9 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- End Gallery -->
+	
+	<!-- Start Customer Reviews -->
 	<div class="customer-reviews-box">
 		<div class="container">
 			<div class="row">
@@ -288,7 +302,7 @@
 								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">
 									<?php echo $r['name']; ?>
 								</strong></h5>
-								<h6 class="text-dark m-0">Review : <?php echo $r['review']; ?></h6>
+								<h6 class="text-dark m-0">Feedback : <?php echo $r['review']; ?></h6>
 								<p class="m-0 pt-3">
 									<?php echo $r['description']; ?>
 								</p>
@@ -298,8 +312,8 @@
 								<div class="img-box p-1 border rounded-circle m-auto">
 									<img class="d-block w-100 rounded-circle" src="images/quotations-button.png" alt="">
 								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Malto</strong></h5>
-								<h6 class="text-dark m-0">Feedback : Good</h6>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Afiq</strong></h5>
+								<h6 class="text-dark m-0">Review : Good</h6>
 								<p class="m-0 pt-3">
 									Good Food, Good Health
 
@@ -320,4 +334,5 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Customer Reviews -->
 <?php include "footer.php"; ?>
