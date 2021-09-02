@@ -1,6 +1,7 @@
 <?php include "header.php"; ?> 
 <body>
 	
+	<!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
 			<div class="row">
@@ -10,7 +11,10 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- End All Pages -->
+	
+	<!-- Start Contact -->
+	
 	<div class="contact-box">
 		<div class="container">
 			<div class="row">
@@ -58,6 +62,10 @@
 					}	
 
 					?>
+
+
+
+
 
 				</div>
 			</div>
