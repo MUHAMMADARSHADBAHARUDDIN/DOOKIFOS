@@ -78,7 +78,7 @@
 
 
 							<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='kathiyawadi'");
+								$s = mysqli_query($con,"select * from menu where category='meals'");
 								while($r = mysqli_fetch_array($s))
 								{	
 								?>
@@ -89,7 +89,7 @@
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
-											<h5>RM <?php echo $r['price']; ?> /-</h5>
+											<h5>RM <?php echo $r['price']; ?> </h5>
 											<h5 align="center">
 												<?php if(isset($_SESSION['uid']))
 									{
@@ -131,7 +131,7 @@
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
-											<h5>RM <?php echo $r['price']; ?> /-</h5>
+											<h5>RM <?php echo $r['price']; ?> </h5>
 											<h5 align="center">
 												<?php if(isset($_SESSION['uid']))
 									{
@@ -160,7 +160,7 @@
 						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 							<div class="row">
                              <?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='rise'");
+								$s = mysqli_query($con,"select * from menu where category='sauces'");
 								while($r = mysqli_fetch_array($s))
 								{	
 								?>
@@ -170,7 +170,7 @@
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
-											<h5>RM <?php echo $r['price']; ?> /-</h5>
+											<h5>RM <?php echo $r['price']; ?> </h5>
 											<h5 align="center">
 											 <?php if(isset($_SESSION['uid']))
 									{
@@ -198,7 +198,7 @@
 						<div class="tab-pane fade" id="v-pills-tava" role="tabpanel" aria-labelledby="v-pills-tava-tab">
 							<div class="row">
 								<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='tava'");
+								$s = mysqli_query($con,"select * from menu where category='desserts'");
 								while($r = mysqli_fetch_array($s))
 								{	
 								?>
@@ -208,7 +208,7 @@
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
-											<h5>RM <?php echo $r['price']; ?> /-</h5>
+											<h5>RM <?php echo $r['price']; ?> </h5>
 											<h5 align="center"><?php if(isset($_SESSION['uid']))
 									{
 									?>
