@@ -50,7 +50,7 @@
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
-											<p>RM <?php echo $r['price']; ?> /-</p>
+											<p>RM <?php echo $r['price']; ?> </p>
 											<h5 align="center">
 									<?php if(isset($_SESSION['uid']))
 									{
