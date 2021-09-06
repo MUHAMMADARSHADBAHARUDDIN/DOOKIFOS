@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">
-					<img src="images/images.jpg" style="height: 450px; width: 100%" class="img-fluid">
+					<img src="images/aboutdookki.png" style=" width: 100%" class="img-fluid">
 				</div>
 				<div class="col-md-12">
 					<div class="inner-pt">
