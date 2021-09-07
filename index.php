@@ -65,7 +65,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12">
-					<img src="images/images.jpg"  width="200%" height="200%" class="img-fluid">
+					<img src="images/aboutdookki.png"  width="200%" height="200%" class="img-fluid">
 				</div>
 			</div>
 		</div>
