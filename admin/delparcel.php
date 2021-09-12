@@ -1,7 +1,12 @@
 <?php include "header.php"; ?>
 <div class="content">
 	<br><br>
-	<?php include  "connect.php"; ?>
+	<?php include  "connect.php"; 
+        $a = $_GET['a'];
+		mysqli_query($con,"delete from checkout where id='$a'");
+    ?>
+    <div style="color: red; font-size: 1.4em; font-weight: bold; border-radius:10px; background-color: yellow; padding: 10px; text-align: center;">Data Deleted SuccessFully</div>
+		<br><br>
 	<table border=1 cellpadding="6" cellspacing="8">
 		<tr>
 			 <th colspan="8">PARCEL CUSTOMERS</th>
