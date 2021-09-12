@@ -33,12 +33,12 @@
 	<table border=1 width="100%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; font-family: times new roman; background-color:">
 
 		<tr>
-			<th>SUB CATEGORY</th>
+			<th>CATEGORY</th>
 			<th>TITLE</th>
 			<th>DESCRIPTION</th>
 			<th>PRICE</th>
 			<th>IMAGE</th>
-			<th>REMOVE</th>
+			<th>DELETE</th>
 		</tr>
 		<?php 
 			$s = mysqli_query($con,"select * from menu");
@@ -46,7 +46,7 @@
 			{
 			?>
 				<tr align=center>
-					<td><?php echo $r['sub_cat']; ?></td>
+					<td><?php echo $r['category']; ?></td>
 					<td><?php echo $r['title']; ?></td>
 					<td><?php echo $r['description']; ?></td>
 					<td><?php echo $r['price']; ?></td>
