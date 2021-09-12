@@ -198,7 +198,7 @@
 						<div class="tab-pane fade" id="v-pills-tava" role="tabpanel" aria-labelledby="v-pills-tava-tab">
 							<div class="row">
 								<?php include "connect.php";
-								$s = mysqli_query($con,"select * from menu where category='desserts'");
+								$s = mysqli_query($con,"select * from menu where category='dessert'");
 								while($r = mysqli_fetch_array($s))
 								{	
 								?>
