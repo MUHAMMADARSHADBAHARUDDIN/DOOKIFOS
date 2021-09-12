@@ -69,14 +69,13 @@ function showUser(str) {
 if(isset($_POST['s']))
 {
 		$cat = $_POST['cat'];
-		$scat = $_POST['scat'];
 		$title = $_POST['title'];
 		$det = $_POST['detail'];
 		$price = $_POST['price'];
 		$i = "mimg/".$_FILES['img']['name'];
 		move_uploaded_file($_FILES['img']['tmp_name'], $i);
 		include "connect.php";
-		mysqli_query($con,"insert into menu (category,sub_cat,title,description,price,image) values('$cat','$scat','$title','$det','$price','$i')");
+		mysqli_query($con,"insert into menu (category,title,description,price,image) values('$cat','$title','$det','$price','$i')");
 		echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";
 		
 }
