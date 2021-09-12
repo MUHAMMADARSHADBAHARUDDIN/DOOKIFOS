@@ -33,10 +33,9 @@ function showUser(str) {
    		<td>Choose Food Category</td>
    	    <td> 
    	    	<select class="text" name="cat" onchange="showUser(this.value)">
-   	    		<option value="meals">Meals</option>
-   	    		<option value="sauces">Sauces</option>
-   	    		<option value="drinks">Drinks</option>
-   	    		<option value="dessert">Desserts</option>
+   	    		<option value="mainmenu">Main Menu</option>
+   	    		<option value="sidemenu">Side Menu</option>
+   	    		<option value="beverages">Beverages</option>
    	    	</select>
    	    </td>
 
