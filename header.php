@@ -70,7 +70,7 @@
 						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>
-						<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" href="">Profile</a></li>
 
 						<!--<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
