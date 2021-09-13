@@ -35,17 +35,17 @@
 </tr>
 
 <tr>   
-<td align="center"> <input type="submit" name="generateCode" value="Get Your Code" style="color:red; background: lightgreen; font-size: 1.3em; font-family: times new roman">  <br> </td>
+<td align="center"> <input type="submit" class="btn btn-primary" name="generateCode" value="Get Your Code" >  <br> </td>
    </tr>
 <tr>  
 	
   <tr>
   	<td>
-  <input type="text" name="uid" value="" placeholder="Enter user id" required="" style="padding: 10px; width: 300%"> <br>  </td>
+  <input type="text" name="uid" value="" placeholder="Enter user id"  style="padding: 10px; width: 300%"> <br>  </td>
     </tr>
    
    <tr>	
- <td> <input type="password" name="pass" value="" placeholder=" Enter Your password" required="" style="padding: 10px; width: 300%"> <br> </td>
+ <td> <input type="password" name="pass" value="" placeholder=" Enter Your password"  style="padding: 10px; width: 300%"> <br> </td>
    </tr>
 
 
@@ -54,7 +54,7 @@
 </tr>
          
       <tr>   
-<td align="center"> <input type="submit" name="registerUser" value="Register Now" style="color:red; background: lightgreen; font-size: 1.3em; font-family: times new roman">  <br> </td>
+<td align="center"> <input type="submit" class="btn btn-primary" name="registerUser" value="Register Now" >  <br> </td>
    </tr>
     	
     </form>
