@@ -52,7 +52,7 @@
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="submit-button text-center">
-									<button name="sb" class="btn btn-common" id="submit" type="submit">Send Message</button>
+									<button name="sb" class="btn btn-common" id="submit" type="submit">Submit</button>
 									<div id="msgSubmit" class="h3 text-center hidden"></div> 
 									<div class="clearfix"></div> 
 								</div>
