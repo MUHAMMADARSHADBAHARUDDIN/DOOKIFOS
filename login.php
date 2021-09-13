@@ -44,11 +44,14 @@
  <td> <input type="Password" name="pass" placeholder="Enter Your Password" style="padding: 10px; width: 150%"> <br>   </td>
 		
 		</tr>
-
+		
 		<tr>	    
  <td align="right"> <input type="submit" name="" value="Login Now" style="color: red; background-color: lightgreen; font-size: 1.5em; font-family: times new roman;"> </td> 
 </tr>
-               
+<tr>
+           <td><a href="forgotPassword.php"> Forgot password?</a></td>
+		
+		</tr>      
               
 </form>
 		</table>			
