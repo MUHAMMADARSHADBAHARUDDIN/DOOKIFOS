@@ -85,12 +85,12 @@
 						if ($_GET['code']=$code)
 						{
 							mysqli_query($con,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
-							echo "<script>alert('Registration SuccessFully');</script>";
+							//echo "<script>alert('Registration SuccessFully');</script>"; for now
 							//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
 						}
 						else
 						{
-							echo "<script>alert('Registration Fail, please try again');</script>";
+							//echo "<script>alert('Registration Fail, please try again');</script>"; for now
 						}
 							
 						
