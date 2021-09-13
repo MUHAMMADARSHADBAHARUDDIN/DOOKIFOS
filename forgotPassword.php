@@ -37,7 +37,7 @@
 
          
       <tr>   
-<td align="center"> <input type="submit" name="forgotPassword" value="Submit Username" style="color:red; background: lightgreen; font-size: 1.3em; font-family: times new roman">  <br> </td>
+<td align="center"> <input type="submit" class="btn btn-primary" name="forgotPassword" value="Submit Username" >  <br> </td>
    </tr>
     	
     </form>
