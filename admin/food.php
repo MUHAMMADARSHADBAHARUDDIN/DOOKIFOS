@@ -59,7 +59,7 @@ function showUser(str) {
 	</tr>
 
     <tr>    
-    	<td colspan=2 align="center"> <input type="submit" name="s" value="Upload now" class="btn"> </td>
+    	<td colspan=2 align="center"> <input type="submit" name="s" value="Upload now" class="btn btn-primary"> </td>
     </tr>
 
 </table>
