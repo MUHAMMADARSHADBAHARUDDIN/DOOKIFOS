@@ -83,7 +83,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<p class="company-name"> &copy; 2021 <a href="#">DOOKI MALAYSIA</a> Developed By :  Group 4
+						<p class="company-name"> &copy; 2021 <a href="#">DOOKKI MALAYSIA</a> Developed By :  Group 4
 					<a href=""></a><br>
 					kecik - kecik no die	
 				</p>
