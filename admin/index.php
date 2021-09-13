@@ -14,7 +14,7 @@
 			<td><input type="password" name="pass" value="" placeholder="Enter Password" class="text" required></td>
 	</tr>
 	<tr align="center">
-			<td><input type="submit" name="s" value="Login Now" class="btn"></td>
+			<td><input type="submit"  name="s" value="Login Now" class="btn btn-primary"></td>
 	</tr>
 </table>
 </form>
