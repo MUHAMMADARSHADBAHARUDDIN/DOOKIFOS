@@ -46,7 +46,7 @@
 		</tr>
 		
 		<tr>	    
- <td align="right"> <input type="submit" name="" value="Login Now" style="color: red; background-color: lightgreen; font-size: 1.5em; font-family: times new roman;"> </td> 
+ <td align="right"> <input type="submit" class="btn btn-primary" name="" value="Login Now" > </td> 
 </tr>
 <tr>
            <td><a href="forgotPassword.php"> Forgot password?</a></td>
