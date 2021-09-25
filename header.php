@@ -56,7 +56,7 @@
 					else
 					{	
 					?>
-					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="login.php">Login</a>
+					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="pre_login.php">Login</a>
 					<?php
 					}
 					?>	
