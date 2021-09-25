@@ -29,7 +29,7 @@ include "header.php";
 
 			    <tr align="center">
 			    	<td style="color: red">   Enter Email address <br>
-			        <input type="Email" name="em" placeholder="Enter email address" style="width: 100%; padding: 10px; color: orange; background-color: black"></td>
+			        <input type="Email" name="em" placeholder="Enter email address" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="[a-z,A-Z,@]*"></td>
 			    </tr>
 
                 <tr align="center">
