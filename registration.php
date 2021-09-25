@@ -31,7 +31,7 @@
      <form action="" method="POST"> 
 
 	 <tr>  
- <td> <input type="email" name="email" value="" placeholder="Enter Your Email Address" required="" style="padding: 10px; width: 300%">  <br> </td>
+ <td> <input type="email" name="email" value="<?php echo isset($_POST['email'])?$_POST['email']:''?>" placeholder="Enter Your Email Address" required="" style="padding: 10px; width: 300%">  <br> </td>
 </tr>
 
 <tr>   
@@ -62,7 +62,20 @@
 
 					<?php
 					
-					$code = '12345';
+					$servername = "localhost";
+				    $username = "root";
+				    $password = "";
+				    $dbname = "dookki_db";
+				    $code = '12345';
+					/*include "connect.php";*/
+                    include "mail.php";
+
+					// Create connection
+                    $conn = mysqli_connect('localhost','root','','dookki_db');
+                    // Check connection
+                    if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                    }
 					
 					if(isset($_POST['generateCode']))
 					{
@@ -70,9 +83,16 @@
 						$pass = $_POST['pass'];
 						$email = $_POST['email'];
 						$randCode=rand(10000,99999);
-						include "mail.php";
+						
+						$sql_e = "SELECT * FROM registration WHERE email='$email'";
+						$res_e = mysqli_query($conn, $sql_e);
+						if (mysqli_num_rows($res_e) > 0) {
+							echo"<script>alert('Sorry... email already being used.');</script>";
+						}else{
+						//include "mail.php";
 						emailVerification("mikhail.shahmie@gmail.com", $email, "Register User Verification", $randCode);
 						$code = $randCode;
+						}
 					}
 
 					if(isset($_POST['registerUser']))
@@ -81,6 +101,13 @@
 						$uid = $_POST['uid'];
 						$pass = $_POST['pass'];
 						$email = $_POST['email'];
+
+						$sql_u = "SELECT * FROM registration WHERE userid='$uid'";
+						$res_u = mysqli_query($conn, $sql_u);
+						if (mysqli_num_rows($res_u) > 0) 
+						{
+							echo"<script>alert('Sorry... username already being used.');</script>";
+						}
 						include "connect.php";
 						if ($_GET['code']=$code)
 						{
@@ -90,7 +117,7 @@
 						}
 						else
 						{
-							//echo "<script>alert('Registration Fail, please try again');</script>"; for now
+							echo "<script>alert('Registration Fail, please try again');</script>"; 
 						}
 							
 						
