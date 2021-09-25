@@ -21,11 +21,23 @@
 }
 
 </style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Pick User Class</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <body>
 
-<h1>HTML Links</h1>
 <center>
-<p><a href="admin_login.php" class="button">Admin Login</a></p>
+<!--<p><a href="admin_login.php" class="button">Admin Login</a></p>-->
+<p>
+
+
+</p>
 <p><a href="admin_login.php" class="button">Admin Login</a></p>
 <p><a href="login.php" class="button">Customer Login</a></p>
 </body>

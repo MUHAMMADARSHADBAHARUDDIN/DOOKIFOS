@@ -114,7 +114,7 @@
 							mysqli_query($con,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
 							$URL="menu.php";
                             echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-                            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">'
+                            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 							//echo "<script>alert('Registration SuccessFully');</script>"; for now
 							//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
 						}
