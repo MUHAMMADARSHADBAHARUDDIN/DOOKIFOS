@@ -50,7 +50,7 @@
 					if(isset($_SESSION['uid']))
 					{
 					?>
-					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp; <a href="cart.php">Cart</a>&nbsp;&nbsp; <a href="logout.php">LogOut</a>
+					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp; <a href="cart.php">Cart</a>&nbsp;&nbsp; <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
 					<?php	
 					}
 					else

@@ -39,7 +39,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">
-					<img src="dookkilogo.png" alt="" />
+					<img src="logo2.png" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
@@ -56,7 +56,7 @@
 					else
 					{	
 					?>
-					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="login.php">Login</a>
+					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="pre_login.php">Login</a>
 					<?php
 					}
 					?>	

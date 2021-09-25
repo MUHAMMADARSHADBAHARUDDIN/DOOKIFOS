@@ -1,4 +1,4 @@
-<?php include "header.php"; ?> 
+<?php include "header.php"; ?>
 
 
 <body>
@@ -108,21 +108,37 @@
 						{
 							echo"<script>alert('Sorry... username already being used.');</script>";
 						}
-						include "connect.php";
-						if ($_GET['code']=$code)
-						{
-							mysqli_query($con,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
-							$URL="menu.php";
-                            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-                            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-							//echo "<script>alert('Registration SuccessFully');</script>"; for now
-							//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
-						}
-						else
-						{
-							echo "<script>alert('Registration Fail, please try again');</script>"; 
-						}
-							
+						else {
+
+							if ($_GET['code']=$code)
+							{
+								 
+								mysqli_query($conn,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
+								echo "<script>alert('Registration SuccessFully');</script>";
+								$URL="login.php";
+								echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+								echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+								//$s = mysqli_query($conn,"select * from registration where userid='$uid' and password='$pass'");new
+								/*if($r = mysqli_fetch_array($s))
+								{
+									
+									$_SESSION['uid'] = $uid;
+									$URL="menu.php";
+								    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+								    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+
+								}*/
+								//$URL="menu.php";
+								//echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+								//echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+								
+								//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
+							}
+							else
+							{
+								echo "<script>alert('Registration Fail, please try again');</script>"; 
+							}
+					}	
 						
 
 						
