@@ -5,7 +5,7 @@
 	<div id="slides" class="cover-slides">
 		<ul class="slides-container">
 			<li class="text-left">
-				<img src="images/267.jpg" alt="">
+				<img src="back1.png" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -18,7 +18,7 @@
 				</div>
 			</li>
 			<li class="text-left">
-				<img src="images/1-kathiyawadi-restaurants-1-ki1aq.jpg" alt="">
+				<img src="back2.png" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -31,7 +31,7 @@
 				</div>
 			</li>
 			<li class="text-left">
-				<img src="images/DSC_2734.jpg" alt="">
+				<img src="back3.png" alt="">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">

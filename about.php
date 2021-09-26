@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php include "header.php"; ?>
 	<!-- Start header -->
-	<img src="images/banner_about_us.jpg" width="100%">
+	<img src="aboutus.png" width="100%">
 	<!-- End header -->
 	
 	<!-- Start About -->
