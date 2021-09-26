@@ -56,7 +56,7 @@
 					<td><?php echo $r['name']; ?></td>
 					<td><?php echo $r['review']; ?></td>
 					<td><?php echo $r['description']; ?></td>
-					<td><a href="delreview.php?a=<?php echo $r['id']; ?>" class="del">DELETE</a></td>
+					<td><a href="delreview.php?a=<?php echo $r['id']; ?>" class="del" onclick="return confirmation('Are you sure you want to delete?');">DELETE</a></td>
 				</tr>	
 		<?php	
 			}

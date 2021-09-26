@@ -6,15 +6,13 @@
         color: black
 
 	}
-	tr:hover{
-		background-color: black;
-		color: white;
+	
 	
 
 	}
-	th{
+	/*th{
 		color: black;
-		font-size: 1.3em;
+		font-size: 1.3em;*/
 	}
 	.del{
 		color: red;

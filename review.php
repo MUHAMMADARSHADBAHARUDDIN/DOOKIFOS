@@ -49,7 +49,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group"> 
-									<textarea class="form-control" id="message" placeholder="Your Message" rows="4" name="desc" data-error="Write your message" required></textarea>
+									<textarea class="form-control" id="message" placeholder="Your Message" rows="4" name="desc" data-error="Write your message" ></textarea>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="submit-button text-center">

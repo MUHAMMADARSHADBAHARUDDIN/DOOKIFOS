@@ -46,7 +46,7 @@
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>UseFull Links</h3>
-					<div class="subscribe_form">
+					<!--<div class="subscribe_form">
 						
 						<a href="">Home</a><br>
 						<a href="">Contact Us</a><br>
@@ -54,7 +54,7 @@
 						<a href="">Gallery</a><br>
 						
 						
-					</div>
+					</div>-->
 					<ul class="list-inline f-social">
 						<li class="list-inline-item"><a href="https://www.facebook.com/mydookki/" target='_blank'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
