@@ -86,14 +86,14 @@
 						$email = $_POST['email'];
 						$randCode=rand(10000,99999);
 
-						mysqli_query($conn,"insert into tempcode(tCode) values('$randCode')");
-
 						$sql_e = "SELECT * FROM registration WHERE email='$email'";
 						$res_e = mysqli_query($conn, $sql_e);
 						if (mysqli_num_rows($res_e) > 0) {
 							echo"<script>alert('Sorry... email already being used.');</script>";
-						}else{
+						}
+						else {
 						//include "mail.php";
+						mysqli_query($conn,"insert into tempcode(tCode) values('$randCode')");
 						emailVerification("mikhail.shahmie@gmail.com", $email, "Register User Verification", $randCode);
 						
 						}
@@ -113,6 +113,8 @@
 						{
 							echo"<script>alert('Pls ensure all field is not blank!');</script>";
 						}
+						else { 
+
 
 						$sql_u = "SELECT * FROM registration WHERE userid='$uid'";
 						$res_u = mysqli_query($conn, $sql_u);
@@ -160,7 +162,7 @@
 							
 					}	
 						
-
+				}
 						
 					}	
 

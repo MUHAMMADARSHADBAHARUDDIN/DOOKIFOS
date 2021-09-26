@@ -75,7 +75,7 @@
 					<td><?php echo $r['price']; ?></td>
 					<td><img src="<?php echo $r['image']; ?>" width=70 height=70></td>
 					<td><a href="" class="update">UPDATE</a></td>
-					<td><a href="delfood.php?a=<?php echo $r['id']; ?>" class="del" onclick="return confirmation('Are you sure you want to delete?');">DELETE</a></td>
+					<td><a href="delfood.php? a=<?php echo $r['id']; ?>" class="del" onclick="return confirm('Are you sure you want to delete?');">DELETE</a></td>
 				</tr>	
 		<?php	
 			}
