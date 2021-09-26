@@ -1,4 +1,5 @@
 <?php include "header.php"; ?>
+<link rel="stylesheet" type="text/css" href="buttonC.css">
 
 
 <body>
@@ -35,7 +36,7 @@
 </tr>
 
 <tr>   
-<td align="center"> <input type="submit" class="btn btn-primary" name="generateCode" value="Get Your Code" >  <br> </td>
+<td align="center"> <input type="submit" class="button" name="generateCode" value="Get Your Code" >  <br> </td>
    </tr>
 <tr>  
 	
@@ -50,24 +51,23 @@
 
 
 
- <td> <input type="code" name="code" value="" placeholder="Enter Your Code" style="padding: 10px; width: 300%">  <br> </td>
+ <td> <input type="code" name="code" value="" placeholder="Enter Your Code"  style="padding: 10px; width: 300%">  <br> </td>
 </tr>
          
       <tr>   
-<td align="center"> <input type="submit" class="btn btn-primary" name="registerUser" value="Register Now" >  <br> </td>
+<td align="center"> <input type="submit" class="button" name="registerUser" value="Register Now" >  <br> </td>
    </tr>
     	
     </form>
  </table>
 
 					<?php
-					
 					$servername = "localhost";
 				    $username = "root";
 				    $password = "";
 				    $dbname = "dookki_db";
-				    $code = '12345';
-					/*include "connect.php";*/
+				    
+					//include "connect.php";
                     include "mail.php";
 
 					// Create connection
@@ -77,13 +77,17 @@
                     die("Connection failed: " . mysqli_connect_error());
                     }
 					
+					
+
 					if(isset($_POST['generateCode']))
 					{
 						$uid = $_POST['uid'];
 						$pass = $_POST['pass'];
 						$email = $_POST['email'];
 						$randCode=rand(10000,99999);
-						
+
+						mysqli_query($conn,"insert into tempcode(tCode) values('$randCode')");
+
 						$sql_e = "SELECT * FROM registration WHERE email='$email'";
 						$res_e = mysqli_query($conn, $sql_e);
 						if (mysqli_num_rows($res_e) > 0) {
@@ -91,9 +95,11 @@
 						}else{
 						//include "mail.php";
 						emailVerification("mikhail.shahmie@gmail.com", $email, "Register User Verification", $randCode);
-						$code = $randCode;
+						
 						}
 					}
+
+					//echo"<script>alert('$rcode');</script>";
 
 					if(isset($_POST['registerUser']))
 					{
@@ -101,6 +107,12 @@
 						$uid = $_POST['uid'];
 						$pass = $_POST['pass'];
 						$email = $_POST['email'];
+						$code = $_POST['code'];	
+						
+						if (($uid == NULL) || ($pass == NULL) || ($code == NULL))
+						{
+							echo"<script>alert('Pls ensure all field is not blank!');</script>";
+						}
 
 						$sql_u = "SELECT * FROM registration WHERE userid='$uid'";
 						$res_u = mysqli_query($conn, $sql_u);
@@ -109,35 +121,43 @@
 							echo"<script>alert('Sorry... username already being used.');</script>";
 						}
 						else {
-
-							if ($_GET['code']=$code)
+							
+							$sql_cd = "SELECT * FROM tempcode";
+							$s = mysqli_query($conn,$sql_cd);
+							while($rcode = mysqli_fetch_array($s))
 							{
-								 
-								mysqli_query($conn,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
-								echo "<script>alert('Registration SuccessFully');</script>";
-								$URL="login.php";
-								echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-								echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-								//$s = mysqli_query($conn,"select * from registration where userid='$uid' and password='$pass'");new
-								/*if($r = mysqli_fetch_array($s))
+								if ($code==$rcode['tCode'])
 								{
+									mysqli_query($conn,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
+									echo "<script>alert('Registration SuccessFully');</script>";
+									mysqli_query($conn,"DELETE from tempcode");
+									//$rcode = mysqli_query($conn, $sql_cd);
+									$URL="login.php";
+									echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+									echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+									//$s = mysqli_query($conn,"select * from registration where userid='$uid' and password='$pass'");new
+									/*if($r = mysqli_fetch_array($s))
+									{
+										
+										$_SESSION['uid'] = $uid;
+										$URL="menu.php";
+										echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+										echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+	
+									}*/
+									//$URL="menu.php";
+									//echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+									//echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 									
-									$_SESSION['uid'] = $uid;
-									$URL="menu.php";
-								    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-								    echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-
-								}*/
-								//$URL="menu.php";
-								//echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-								//echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-								
-								//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
+									//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
+								}
+								else
+								{
+									echo "<script>alert('Registration Fail, please try again');</script>"; 
+								}
 							}
-							else
-							{
-								echo "<script>alert('Registration Fail, please try again');</script>"; 
-							}
+							
+							
 					}	
 						
 

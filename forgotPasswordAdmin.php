@@ -1,4 +1,5 @@
 <?php include "forgotHeader.php"; ?> 
+<link rel="stylesheet" type="text/css" href="buttonC.css">
 
 
 <body>
@@ -37,7 +38,7 @@
 
          
       <tr>   
-<td align="center"> <input type="submit" class="btn btn-primary" name="forgotPassword" value="Submit Email" >  <br> </td>
+<td align="center"> <input type="submit" class="button" name="forgotPassword" value="Submit Email" >  <br> </td>
    </tr>
     	
     </form>

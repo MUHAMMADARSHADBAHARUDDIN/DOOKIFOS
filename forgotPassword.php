@@ -1,4 +1,5 @@
-<?php include "forgotHeader.php"; ?> 
+<?php include "forgotHeader.php"; ?>
+<link rel="stylesheet" type="text/css" href="buttonC.css"> 
 
 
 <body>
@@ -37,7 +38,7 @@
 
          
       <tr>   
-<td align="center"> <input type="submit" class="btn btn-primary" name="forgotPassword" value="Submit E-mail" >  <br> </td>
+<td align="center"> <input type="submit" class="button" name="forgotPassword" value="Submit E-mail" >  <br> </td>
    </tr>
     	
     </form>
@@ -67,7 +68,7 @@
 							// output data of each row
 							while($row = mysqli_fetch_assoc($result)) {
 								//echo "password " . $row["password"].  "<br>";
-								$pass = "Your password is " . $row["password"] . "";
+								$pass = "Your password is '" . $row["password"] . "'";
 								//echo "<script>alert('$pass');</script>"; 
 								emailForgotPassword("mikhail.shahmie@gmail.com", $email, "Forgot Password", $pass);
 								}

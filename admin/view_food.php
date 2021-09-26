@@ -1,20 +1,29 @@
 <?php include "header.php"; ?>
 <?php include "connect.php"; ?>
+<link rel="stylesheet" type="text/css" href="button.css">
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-		color: #26947e;
+		color: black/*#26947e*/;
 
 
 	}
-	tr:hover{
-		background-color: black;
+	.del{
+		color: red;
+		text-decoration: none;
+	}
+	.update{
+		color: green;
+		text-decoration: none;
+	}
+	/*tr:hover{
+		background-color: grey;
 		color: white;
 	
 
 	}
 	th{
-		color: blue;
+		color: tomato;
 		font-size: 1.3em;
 	}
 	.del{
@@ -24,13 +33,26 @@
 	.del:hover{
 		color: blue;
 		text-decoration: none;
-		text-shadow: 2px 3px 2px #FFFFFF;
+		text-shadow: 2px 3px 2px #FFFFFF;*/
 	}
 
 
 </style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>View Menu</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
-	<table border=1 width="100%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; font-family: times new roman; background-color:">
+<a href="food.php" class = button>Add New Food</a>	
+<br>
+
+	<center>
+	<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
 
 		<tr>
 			<th>CATEGORY</th>
@@ -52,16 +74,15 @@
 					<td><?php echo $r['description']; ?></td>
 					<td><?php echo $r['price']; ?></td>
 					<td><img src="<?php echo $r['image']; ?>" width=70 height=70></td>
-					<td><a href="">UPDATE</a></td>
-					<td><a href="delfood.php?a=<?php echo $r['id']; ?>" class="del">DELETE</a></td>
+					<td><a href="" class="update">UPDATE</a></td>
+					<td><a href="delfood.php?a=<?php echo $r['id']; ?>" class="del" onclick="return confirmation('Are you sure you want to delete?');">DELETE</a></td>
 				</tr>	
 		<?php	
 			}
 		?>
-
-
-	</table>	
+   </table>	
 
 
 </div>
+<br>
 <?php include "footer.php"; ?>

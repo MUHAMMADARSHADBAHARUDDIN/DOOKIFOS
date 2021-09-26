@@ -1,10 +1,33 @@
 <?php include "header.php"; ?>
+
+<style type="text/css">
+	tr{
+		font-size: 1.2em;
+		color: black;
+
+
+	}
+	.del{
+		color: red;
+		text-decoration: none;
+	}
+	</style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Order List</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
 	<br><br>
 	<?php include  "connect.php"; ?>
-	<table border=1 cellpadding="6" cellspacing="8">
+	<center>
+	<table border=1 cellpadding="6" cellspacing="8" style="box-shadow: 5px 4px 10px 2px;  background-color:">
 		<tr>
-			 <th colspan="9">PARCEL CUSTOMERS</th>
+			 <th colspan="9">CUSTOMER ORDER</th>
 		</tr>
 		<tr>
 			<th>Product ID</th>
@@ -32,7 +55,7 @@
 			<td><?php echo $r['location']; ?></td>
 			<td><a href="viewcart.php?pid=<?php echo $r['p_id']; ?>&uid=<?php echo $r['u_id']; ?>">View Product</a></td>
 			<td><a href="">Update</a></td>
-			<td><a href="delparcel.php">Delete</a></td>
+			<td><a href="delparcel.php" class="del">Delete</a></td>
 		<?php
 		}
 		?>
@@ -40,4 +63,5 @@
 	 
 
 </div>
+<br>
 <?php include "footer.php"; ?>

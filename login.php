@@ -1,4 +1,5 @@
 <?php include "header.php"; ?> 
+<link rel="stylesheet" type="text/css" href="buttonC.css">
 <body>
 	
 	<!-- Start All Pages -->
@@ -46,9 +47,11 @@
 		</tr>
 		
 		<tr>	    
- <td align="right"> <input type="submit" class="btn btn-primary" name="" value="Login Now" > </td> 
+		<td>                    </td>    
+ <td> <input type="submit" class="button" name="" value="Login Now" > </td> 
 </tr>
 <tr>
+		<td>                    </td>    
            <td><a href="forgotPassword.php"> Forgot password?</a></td>
 		
 		</tr>      

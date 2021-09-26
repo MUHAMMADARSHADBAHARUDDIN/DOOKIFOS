@@ -3,12 +3,13 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
+		color: black;
 
 
 	}
-	tr:hover{
+	/*tr:hover{
 		background-color: black;
-		color: white;
+		color: white;*/
 	
 
 	}
@@ -28,8 +29,19 @@
 
 
 </style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Feedback</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+<br><br>
 <div class="content">
-	<table border=1 width="100%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
+	<center>
+	<table border=1 width="80%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
 
 		<tr>
 			<th>ID</th><th>NAME</th><th>FEEDBACKS</th><th>COMMENTS</th><th>REMOVE</th>
@@ -55,4 +67,5 @@
 
 
 </div>
+<br>
 <?php include "footer.php"; ?>

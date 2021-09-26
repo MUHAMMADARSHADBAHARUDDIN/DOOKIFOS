@@ -3,7 +3,7 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-
+        color: black
 
 	}
 	tr:hover{

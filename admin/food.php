@@ -16,10 +16,20 @@ function showUser(str) {
 }
 </script>
 <?php include "header.php"; ?>
+<link rel="stylesheet" type="text/css" href="button.css">
 
 <link rel="stylesheet" type="text/css" href="style.css">
-
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Add Food</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
+	<br><br>
 	<form action="" method="post" enctype="multipart/form-data">
 	<table border=0 align="center" bgcolor="white" width="65%" style="box-shadow: 1px 3px 15px 2px;" cellpadding="10" cellspacing="15" >
 	
@@ -45,7 +55,7 @@ function showUser(str) {
    	   </tr> 
 	<tr align="center"> 
             <td> Enter Food Detail </td>
-			<td><textarea rows="4" name="detail" cols="40" class="ar" style="background-color: black; color: white; padding: 10px;"></textarea></td>
+			<td><textarea rows="4" name="detail" cols="40" class="text" style="background-color: black; color: white; padding: 10px;"></textarea></td>
 	</tr>
 
 	<tr align="center"> 
@@ -59,7 +69,7 @@ function showUser(str) {
 	</tr>
 
     <tr>    
-    	<td colspan=2 align="center"> <input type="submit" name="s" value="Upload now" class="btn btn-primary"> </td>
+    	<td colspan=2 align="center"> <input type="submit" name="s" value="Add Food" class="button"> </td>
     </tr>
 
 </table>
@@ -80,4 +90,5 @@ if(isset($_POST['s']))
 }
 ?>	
 </div>
+<br>
 <?php include "footer.php"; ?>

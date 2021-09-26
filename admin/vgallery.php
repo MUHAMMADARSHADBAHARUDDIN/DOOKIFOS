@@ -23,9 +23,18 @@
 
 
 </style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>View Gallery</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
-	<center><a href="gallery.php" style="text-decoration: none; color: red;">Upload Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="vgallery.php" style="text-decoration: none; color: red;">View Gallery</a></center>
+	<center><a href="gallery.php" >Upload Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
 	<?php include "connect.php";
 		
 	 ?>

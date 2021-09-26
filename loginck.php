@@ -14,8 +14,8 @@ if($r = mysqli_fetch_array($s))
 }
 else
 {
-		echo "<br><div style='color:black; border-radius:10px; padding:10px; text-align:center; background-color:tomato;'>Please Enter Valid User and password</div><br>";
-		include "login.php";
+	echo "<script>alert('Invalid Username/Password');</script>";
+	include "login.php";
 }
 
 ?>

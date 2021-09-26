@@ -1,5 +1,6 @@
 <?php include "header.php"; ?>
 <?php include "connect.php"; ?>
+<link rel="stylesheet" type="text/css" href="button.css">
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
@@ -23,13 +24,26 @@
 
 
 </style>
+<div class="all-page-title page-breadcrumb">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Gallery</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 <div class="content">
+<br>
 	
 	<form action="" method="post" enctype="multipart/form-data">
-	<table border=0 width="100%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
+	<center>
+	<table border=0  cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
 
-		<tr>
-			<th colspan="2">Upload Your Image Here &nbsp;&nbsp;&nbsp;&nbsp; <a href="vgallery.php">View Gallery</a></th>
+		<tr> 
+			<center>
+			<th colspan="2">Upload Your Image Here &nbsp;&nbsp;&nbsp;&nbsp; </th>
+			<a href="vgallery.php">View Gallery</a>
 		</tr>
 		<tr>
 			<th>&nbsp;</th>
@@ -38,7 +52,7 @@
 			<td align="right" width="50%">Choose Image Here</td><td><input type="file" name="img" value=""></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="center"><input type="submit" class="btn" name="sb" value="    Upload Now    "></td>
+			<td colspan="2" align="center"><input type="submit" class="button" name="sb" value="    Upload Now    "></td>
 		</td>
 		<tr>
 			<th>&nbsp;</th>
