@@ -16,7 +16,7 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
+	 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">    
 	<!-- Site CSS -->
@@ -41,16 +41,12 @@
 				<a class="navbar-brand">
 					<img src="logo2.png" alt="" />
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
 				<div>
-
-					<?php
+				<?php
 					if(isset($_SESSION['uid']))
 					{
 					?>
-					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp; <a href="cart.php">Cart</a>&nbsp;&nbsp; <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
+					<li>HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;
 					<?php	
 					}
 					else
@@ -59,9 +55,9 @@
 					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="pre_login.php">Login</a>
 					<?php
 					}
-					?>	
-
-					  </div>
+					?>
+			</div>
+				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
@@ -70,8 +66,41 @@
 						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Profile</a></li>
 
+						<?php
+					if(isset($_SESSION['uid']))
+					{
+					?>       		
+					<div class="dropdown"><a style="font-size:30px" data-toggle="dropdown" href="#">≡ <span class="caret"></span></a>
+					<ul class="dropdown-menu"> 
+						<li class="nav-item"><a href="#">Profile</a></li>
+						<li>
+						<?php
+						if(isset($_SESSION['uid']))
+						{
+						?>
+						<li><a href="cart.php">Cart</a>&nbsp;&nbsp;<br> <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
+						<?php	
+						}
+						else
+						{	
+						?>
+						<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<br><a href="pre_login.php">Login</a>
+						<?php
+						}
+						?>	
+						</li>
+					</ul>
+						<?php
+					}
+					else
+					{								
+					}
+					?>	
+				</li>
+				</ul>
+
+					  </div>
 						<!--<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
