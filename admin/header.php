@@ -65,17 +65,15 @@
 						<li class="nav-item"><a class="nav-link" href="view_food.php">View Menu</a></li>
 						<li class="nav-item"><a class="nav-link" href="view_customer.php">View Customer</a></li>
 						<li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
-						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>
-						<li class="nav-item"><a class="nav-link" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Logout</a></li>
+						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>						
 						
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">More</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="reservation.html">Reservation</a>
-								<a class="dropdown-item" href="stuff.html">Stuff</a>
-								<a class="dropdown-item" href="gallery.html">Gallery</a>
+								<a  class="nav-item"><a class="nav-link" href="profile.php">Profile</a>
+								<a class="nav-item"><a class="nav-link" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Logout</a>
 							</div>
-						</li> -->
+						</li> 
 						<!--<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
