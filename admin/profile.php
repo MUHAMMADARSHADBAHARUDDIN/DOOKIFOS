@@ -27,7 +27,7 @@
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1>Update User Profile</h1>
+					<h1>Update Admin Profile</h1>
 				</div>
 			</div>
 		</div>
