@@ -7,6 +7,11 @@
 
 
 	}
+
+	.update{
+		color: green;
+		text-decoration: none;
+	}
 	.del{
 		color: red;
 		text-decoration: none;
@@ -54,9 +59,9 @@
 			<td><?php echo $r['email']; ?></td>
 			<td><?php echo $r['location']; ?></td>
 			<td><a>View Product</a></td>
-			<td><a href="">Update</a></td>
+			<td><a class = update href="">Update</a></td>
 			<td><a href="delparcel.php? a=<?php echo $r['id']; ?>" class="del" onclick="return confirm('Are you sure you want to delete?');">DELETE</a></td>
-		<?php
+		<?php 
 		}
 		?>
 	</table>
