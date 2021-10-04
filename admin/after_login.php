@@ -53,9 +53,9 @@
 			<td><?php echo $r['mobile']; ?></td>
 			<td><?php echo $r['email']; ?></td>
 			<td><?php echo $r['location']; ?></td>
-			<td><a href="viewcart.php?pid=<?php echo $r['p_id']; ?>&uid=<?php echo $r['u_id']; ?>">View Product</a></td>
+			<td><a>View Product</a></td>
 			<td><a href="">Update</a></td>
-			<td><a href="delparcel.php" class="del">Delete</a></td>
+			<td><a href="delparcel.php? a=<?php echo $r['id']; ?>" class="del" onclick="return confirm('Are you sure you want to delete?');">DELETE</a></td>
 		<?php
 		}
 		?>
