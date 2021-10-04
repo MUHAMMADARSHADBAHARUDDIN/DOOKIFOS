@@ -73,14 +73,14 @@
 					?>       		
 					<div class="dropdown"><a style="font-size:30px" data-toggle="dropdown" href="#">≡ <span class="caret"></span></a>
 					<ul class="dropdown-menu"> 
-						<li class="nav-item"><a href="#">Profile</a></li>
+						<li class="nav-item"><a href="profile.php">Profile</a></li>
 						<li>
 						<?php
 						if(isset($_SESSION['uid']))
 						{
 						?>
 						<li><a href="cart.php">Cart</a>&nbsp;&nbsp;<br> <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
-						<?php	
+						<?php
 						}
 						else
 						{	
