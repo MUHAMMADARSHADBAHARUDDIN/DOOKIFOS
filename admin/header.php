@@ -63,6 +63,7 @@
 						<li class="nav-item"><a class="nav-link" href="after_login.php">View Order</a></li>
 						<!--<li class="nav-item"><a class="nav-link" href="food.php">Add Food Menu</a></li>-->
 						<li class="nav-item"><a class="nav-link" href="view_food.php">View Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="view_customer.php">View Customer</a></li>
 						<li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>
 						<li class="nav-item"><a class="nav-link" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Logout</a></li>
