@@ -33,8 +33,8 @@
 	.del:hover{
 		color: blue;
 		text-decoration: none;
-		text-shadow: 2px 3px 2px #FFFFFF;
-	}*/
+		text-shadow: 2px 3px 2px #FFFFFF;*/
+	}
 
 
 </style>
@@ -47,54 +47,54 @@
 			</div>
 		</div>
 	</div>
-	<body>
 <div class="content">
 
 <br>
 
-<center>
-	
-	<?php
-		    include "searchCustomer.php";
-			$qryCustomerList = "";
-			displaySearchOption();
-			if(isSet($_POST['searchByCustomerId']))
-	        	$qryCustomerList = searchByCustomerId();
-            else if (isSet($_POST['searchByEmail']))
-	        	$qryCustomerList = searchByEmail();
-			else
-				$qryCustomerList = getListOfCustomer();
-			?>
-		
-			<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
-	
-	
-			<tr>
-				
-				<th>USER ID</th>
-				<th>EMAIL</th>
-				
-			</tr>
-			<?php 
-		//$count = 1;
-		//$s = mysqli_query($con,$qryCustomerList);
-		while($s = mysqli_fetch_assoc($qryCustomerList))
-		{
-			?>
-			<tr align=center>
-			  
-				<td><?php echo $s['userid']; ?></td>
-				<td><?php echo $s['email']; ?></td>
-				
-			</tr>	
-		<?php	
-		
-			}
-			?>
-   		</table>
-	
-   <?php		
-		function displaySearchOption()
+	<center>
+    <?php
+		include "searchCustomer.php";
+		displaySearchOption();
+		if(isSet($_POST['searchByCustomerId'])) 
+        {
+            $custId = $_POST['searchKey'];
+	        $qryCustomerList = searchByCustomerId($custId); 
+            echo strval($qryCustomerList);
+        }
+        else if(isSet($_POST['searchByEmail']))
+        {
+            $emailId = $_POST['searchKey'];  
+	        $qryCustomerList = searchByEmail($emailId);
+            //echo strval($qryCustomerList);  
+        }
+	?>
+        <table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
+
+
+		<tr>
+            
+			<th>USER ID</th>
+			<th>EMAIL</th>
+			
+		</tr>
+		<?php 
+           //echo $qryCustomerList;
+           $s = mysqli_query($con,$qryCustomerList);
+           while($r = mysqli_fetch_array($s))
+           {
+           ?>
+               <tr align=center>
+                 
+                   <td><?php echo $r['userid']; ?></td>
+                   <td><?php echo $r['email']; ?></td>
+                   
+               </tr>	
+       <?php	
+           }
+		?>
+   </table>
+   <?php
+   function displaySearchOption()
 		{
 			echo '<form action="" method="POST">';
 				echo '<fieldset><legend>Search Option</legend>';
@@ -102,7 +102,7 @@
 						placeholder="Enter search value:">';
 					echo '<input type="submit" value="Search By Customer ID"
 							name="searchByCustomerId">';
-					echo '<input type="submit" value="Search By email"
+					echo '<input type="submit" value="Search By Name"
 							name="searchByEmail">';
 					
 					echo '<input type="submit" value="Display All"
@@ -115,9 +115,9 @@
 				echo '</fieldset>';
 			echo '</form><br>';
 			
-		} 
-		?>
+		} 	
+  ?>
+
 </div>
-</body>
 <br>
 <?php include "footer.php"; ?>
