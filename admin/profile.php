@@ -42,7 +42,7 @@
 </p>
 	<div class="row">
 		<div class="col-md-8 offset-2">
-			<form action="">
+			<form method="post" action="">
 				<?php
 				$conn = mysqli_connect('localhost','root','','dookki_db');
 				$currentUser = $_SESSION['uid'];
@@ -57,13 +57,16 @@
 								?>
 									<div class="col-md-6">
 										<div class="form-group">
-											Username : <input type="text" name="updateusername" class="form-control" value="<?php echo $row['adminid']; ?>">
+											Username : <input type="text" name="adminusername" class="form-control" value="<?php echo $row['adminid']; ?>">
 										</div>
 										<div class="form-group">
-											Password : <input name="userpassword" class="form-control" value="<?php echo $row['password']; ?>">
+											Email : <input type="email" name="adminemail" class="form-control" value="<?php echo $row['email']; ?>">
 										</div>
 										<div class="form-group">
-											<input type="file" name="userimage" class="form-control">
+											Password : <input name="adminpassword" class="form-control" value="<?php echo $row['password']; ?>">
+										</div>
+										<div class="form-group">
+											<input type="file" name="adminimage" class="form-control">
 										</div>
 					
 										<div class="form-group">
@@ -74,6 +77,24 @@
 							}
 						}
 					}
+				?>
+				<?php
+      			if(isset($_POST['update'])){
+        			$adminusername = $_POST['adminusername'];
+        			$adminemail = $_POST['adminemail'];
+        			$adminpassword = $_POST['adminpassword'];
+        			$adminimage = $_POST['adminimage'];
+      					$query = "UPDATE admin SET adminid = '$adminusername',
+                      			email = '$adminemail', password = '$adminpassword', profile = '$adminimage'
+                      			WHERE adminid = '$uid'";
+                    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                    ?>
+                     	<script type="text/javascript">
+            		alert("Update Successfull.");
+            		window.location = "../admin_login.php";
+        		</script>
+        		<?php
+            	}              
 				?>
 			</form>
 		</div>
