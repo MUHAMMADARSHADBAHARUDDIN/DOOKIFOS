@@ -57,6 +57,9 @@
 								?>
 									<div class="col-md-6">
 										<div class="form-group">
+											<img src="<?php echo "admin/".$row["profile"]; ?>"height="150" width="125">
+										</div>
+										<div class="form-group">
 											Username : <input type="text" name="adminusername" class="form-control" value="<?php echo $row['adminid']; ?>">
 										</div>
 										<div class="form-group">
@@ -66,11 +69,14 @@
 											Password : <input name="adminpassword" class="form-control" value="<?php echo $row['password']; ?>">
 										</div>
 										<div class="form-group">
+											<input type="submit" name="update" class="btn btn-info" value="Update">
+										</div>
+
+										<div class="form-group">
 											<input type="file" name="adminimage" class="form-control">
 										</div>
-					
 										<div class="form-group">
-											<input type="submit" name="update" class="btn btn-info" value="Update">
+											<input type="submit" name="changeimage" class="btn btn-info" value="Change">
 										</div>
 									</div>
 								<?php
@@ -85,12 +91,27 @@
         			$adminpassword = $_POST['adminpassword'];
         			$adminimage = $_POST['adminimage'];
       					$query = "UPDATE admin SET adminid = '$adminusername',
-                      			email = '$adminemail', password = '$adminpassword', profile = '$adminimage'
+                      			email = '$adminemail', password = '$adminpassword'
                       			WHERE adminid = '$uid'";
                     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                     ?>
                      	<script type="text/javascript">
             		alert("Update Successfull.");
+            		window.location = "../admin_login.php";
+        		</script>
+        		<?php
+            	}              
+				?>
+
+				<?php
+      			if(isset($_POST['changeimage'])){
+        			$adminimage = $_POST['adminimage'];
+      					$query = "UPDATE admin SET profile = '$adminimage'
+                      			WHERE adminid = '$uid'";
+                    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                    ?>
+                     	<script type="text/javascript">
+            		alert("Profile Picture Changed Successfull");
             		window.location = "../admin_login.php";
         		</script>
         		<?php
