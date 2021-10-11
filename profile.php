@@ -42,7 +42,7 @@
 </p>
 	<div class="row">
 		<div class="col-md-8 offset-2">
-			<form action="">
+			<form method="post" action="">
 				<?php
 				$conn = mysqli_connect('localhost','root','','dookki_db');
 				$currentUser = $_SESSION['uid'];
@@ -60,7 +60,7 @@
 											Username : <input type="text" name="updateusername" class="form-control" value="<?php echo $row['userid']; ?>">
 										</div>
 										<div class="form-group">
-											Email : <input type="email" name="useremai" class="form-control" value="<?php echo $row['email']; ?>">
+											Email : <input type="email" name="useremail" class="form-control" value="<?php echo $row['email']; ?>">
 										</div>
 										<div class="form-group">
 											Password : <input name="userpassword" class="form-control" value="<?php echo $row['password']; ?>">
@@ -77,6 +77,24 @@
 							}
 						}
 					}
+				?>
+				 <?php
+      			if(isset($_POST['update'])){
+        			$updateusername = $_POST['updateusername'];
+        			$useremail = $_POST['useremail'];
+        			$userpassword = $_POST['userpassword'];
+        			$userimage = $_POST['userimage'];
+      					$query = "UPDATE registration SET userid = '$updateusername',
+                      			email = '$useremail', password = '$userpassword', profile = '$userimage'
+                      			WHERE userid = '$uid'";
+                    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                    ?>
+                     	<script type="text/javascript">
+            		alert("Update Successfull.");
+            		window.location = "login.php";
+        		</script>
+        		<?php
+            	}              
 				?>
 			</form>
 		</div>
