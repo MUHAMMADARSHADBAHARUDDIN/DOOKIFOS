@@ -57,6 +57,9 @@
 								?>
 									<div class="col-md-6">
 										<div class="form-group">
+											<img src="<?php echo $row["profile"]; ?>"height="150" width="125">
+										</div>
+										<div class="form-group">
 											Username : <input type="text" name="updateusername" class="form-control" value="<?php echo $row['userid']; ?>">
 										</div>
 										<div class="form-group">
@@ -66,12 +69,16 @@
 											Password : <input name="userpassword" class="form-control" value="<?php echo $row['password']; ?>">
 										</div>
 										<div class="form-group">
-											<input type="file" name="userimage" class="form-control">
-										</div>
-					
-										<div class="form-group">
 											<input type="submit" name="update" class="btn btn-info" value="Update">
 										</div>
+
+										<div class="form-group">
+											Change Profile Picture<input type="file" name="userimage" class="form-control">
+										</div>
+										<div class="form-group">
+											<input type="submit" name="changeimage" class="btn btn-info" value="Change">
+										</div>
+										
 									</div>
 								<?php
 							}
@@ -83,14 +90,28 @@
         			$updateusername = $_POST['updateusername'];
         			$useremail = $_POST['useremail'];
         			$userpassword = $_POST['userpassword'];
-        			$userimage = $_POST['userimage'];
       					$query = "UPDATE registration SET userid = '$updateusername',
-                      			email = '$useremail', password = '$userpassword', profile = '$userimage'
+                      			email = '$useremail', password = '$userpassword'
                       			WHERE userid = '$uid'";
                     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
                     ?>
                      	<script type="text/javascript">
-            		alert("Update Successfull.");
+            		alert("Update Successfull");
+            		window.location = "login.php";
+        		</script>
+        		<?php
+            	}              
+				?>
+
+				<?php
+      			if(isset($_POST['changeimage'])){
+        			$userimage = $_POST['userimage'];
+      					$query = "UPDATE registration SET profile = '$userimage'
+                      			WHERE userid = '$uid'";
+                    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                    ?>
+                     	<script type="text/javascript">
+            		alert("Profile Picture Changed Successfull");
             		window.location = "login.php";
         		</script>
         		<?php
