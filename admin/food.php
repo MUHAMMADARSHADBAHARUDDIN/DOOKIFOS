@@ -15,6 +15,8 @@ function showUser(str) {
   }
 }
 </script>
+<?php session_start();
+    $uid = $_SESSION['uid'];?>
 <?php include "header.php"; ?>
 <link rel="stylesheet" type="text/css" href="button.css">
 

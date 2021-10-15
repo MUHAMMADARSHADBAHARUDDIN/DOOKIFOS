@@ -48,10 +48,10 @@
 				<div>
 
 					<?php
-					if(isset($_SESSION['adminid']))
+					if(isset($_SESSION['uid']))
 					{
 					?>
-					HI <?php echo $_SESSION['adminid']; ?> &nbsp;&nbsp;  <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
+					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;  
 				    <?php
 					}
 					?>

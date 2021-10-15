@@ -1,3 +1,5 @@
+<?php session_start();
+    $uid = $_SESSION['uid'];?>
 <?php include "header.php"; ?>
 <?php include "connect.php"; ?>
 <link rel="stylesheet" type="text/css" href="button.css">
@@ -100,16 +102,16 @@
 				echo '<fieldset><legend>Search Option</legend>';
 					echo '<input type="text" name="searchKey" 
 						placeholder="Enter search value:">';
-					echo '<input type="submit" value="Search By Customer ID"
+					echo '<input type="submit" value="Search By User ID"
 							name="searchByCustomerId">';
-					echo '<input type="submit" value="Search By email"
+					echo '<input type="submit" value="Search By E-mail"
 							name="searchByEmail">';
 					
 					echo '<input type="submit" value="Display All"
 							name="displayAllButton">';
 					
-					echo '<br><input type="checkbox" value="ExactMatch"
-							name="cbExactMatch">Exact Match</input>';
+					/*echo '<br><input type="checkbox" value="ExactMatch"
+							name="cbExactMatch">Exact Match</input>';*/
 		
 							
 				echo '</fieldset>';
