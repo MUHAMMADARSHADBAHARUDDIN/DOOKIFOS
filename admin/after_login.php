@@ -1,5 +1,4 @@
-<?php session_start();
-    $uid = $_SESSION['uid'];?>
+
 <?php include "header.php"; ?>
 
 <style type="text/css">
