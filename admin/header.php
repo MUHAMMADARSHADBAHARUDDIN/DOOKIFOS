@@ -51,7 +51,11 @@
 					if(isset($_SESSION['uid']))
 					{
 					?>
+
 					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;  
+
+					<!--HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;  <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>-->
+
 				    <?php
 					}
 					?>
@@ -62,7 +66,7 @@
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="after_login.php">View Order</a></li>
 						<!--<li class="nav-item"><a class="nav-link" href="food.php">Add Food Menu</a></li>-->
-						<li class="nav-item"><a class="nav-link" href="view_food.php">View Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="view_food2.php">View Menu</a></li>
 						<li class="nav-item"><a class="nav-link" href="view_customer.php">View Customer</a></li>
 						<li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>						

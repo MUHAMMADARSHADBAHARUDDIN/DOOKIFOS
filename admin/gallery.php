@@ -1,4 +1,5 @@
-
+<?php session_start();
+    $uid = $_SESSION['uid'];?>
 <?php include "header.php"; ?>
 <?php include "connect.php"; ?>
 <link rel="stylesheet" type="text/css" href="button.css">

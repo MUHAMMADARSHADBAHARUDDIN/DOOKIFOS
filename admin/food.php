@@ -39,8 +39,12 @@ function showUser(str) {
 	<tr align="center">
 			<td class="title">Upload New Food</td><td><a href="view_food.php" style="color: red; text-decoration: none;">View All Foods</a></td>
     </tr>
+	<tr align="center">
+   	   	    <td> Enter Food ID</td>
+   	   	    <td><input type="text" name="foodId" value="" placeholder="" class="text" required></td>
+   	   </tr> 
     
-
+	
    <tr align="center">   
    		<td>Choose Food Category</td>
    	    <td> 
@@ -79,14 +83,15 @@ function showUser(str) {
 <?php
 if(isset($_POST['s']))
 {
-		$cat = $_POST['cat'];
+	    $fid = $_POST['id'];
+	    $cat = $_POST['cat'];
 		$title = $_POST['title'];
 		$det = $_POST['detail'];
 		$price = $_POST['price'];
 		$i = "mimg/".$_FILES['img']['name'];
 		move_uploaded_file($_FILES['img']['tmp_name'], $i);
 		include "connect.php";
-		mysqli_query($con,"insert into menu (category,title,description,price,image) values('$cat','$title','$det','$price','$i')");
+		mysqli_query($con,"insert into menu (id,category,title,description,price,image) values('$fid','$cat','$title','$det','$price','$i')");
 		echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";
 		
 }
