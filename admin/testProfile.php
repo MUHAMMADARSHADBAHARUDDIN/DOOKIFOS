@@ -128,6 +128,7 @@
 						}
 				   	  
 		            mysqli_close($con);
+                    session_destroy();
 		            $URL="../admin_login.php";
 		            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
 		            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
