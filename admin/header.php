@@ -45,23 +45,6 @@
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
-				<div>
-
-					<?php
-					if(isset($_SESSION['uid']))
-					{
-					?>
-
-					HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;  
-
-					<!--HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;  <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>-->
-
-				    <?php
-					}
-					?>
-					
-
-					  </div>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="after_login.php">View Order</a></li>
@@ -71,21 +54,20 @@
 						<li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>						
 						
+						<?php
+					if(isset($_SESSION['uid']))
+					{
+					?>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">More</a>
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"> <?php echo $_SESSION['uid']; ?></a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a  class="nav-item"><a class="nav-link" href="profile.php">Profile</a>
-								<a class="nav-item"><a class="nav-link" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Logout</a>
+								<a class="dropdown-item" href="profile.php">Profile</a>
+								<a class="dropdown-item" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Log Out</a>
 							</div>
-						</li> 
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">blog</a>
-								<a class="dropdown-item" href="blog-details.html">blog Single</a>
-							</div>
-						</li> -->
-						<!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						</li>
+					<?php
+					}
+					?>
 					</ul>
 				</div>
 			</div>
