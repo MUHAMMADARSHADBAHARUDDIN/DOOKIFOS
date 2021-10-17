@@ -39,10 +39,10 @@ function showUser(str) {
 	<tr align="center">
 			<td class="title">Upload New Food</td><td><a href="view_food.php" style="color: red; text-decoration: none;">View All Foods</a></td>
     </tr>
-	<tr align="center">
+	<!--<tr align="center">
    	   	    <td> Enter Food ID</td>
    	   	    <td><input type="text" name="foodId" value="" placeholder="" class="text" required></td>
-   	   </tr> 
+   	   </tr> -->
     
 	
    <tr align="center">   
