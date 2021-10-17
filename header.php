@@ -42,20 +42,6 @@
 					<img src="logo2.png" alt="" />
 				</a>
 				<div>
-				<?php
-					if(isset($_SESSION['uid']))
-					{
-					?>
-					<li>HI <?php echo $_SESSION['uid']; ?> &nbsp;&nbsp;
-					<?php	
-					}
-					else
-					{	
-					?>
-					<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<a href="pre_login.php">Login</a>
-					<?php
-					}
-					?>
 			</div>
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
@@ -67,59 +53,23 @@
 						<li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 						<li class="nav-item"><a class="nav-link" href="review.php">Feedback</a></li>
 
-						<?php
+					<?php
 					if(isset($_SESSION['uid']))
 					{
-					?>       		
-					<div class="dropdown"><a style="font-size:30px" data-toggle="dropdown" href="#">≡ <span class="caret"></span></a>
-					<ul class="dropdown-menu"> 
-						<li class="nav-item"><a href="profile.php">Profile</a></li>
-						<li>
-						<?php
-						if(isset($_SESSION['uid']))
-						{
-						?>
-						<li><a href="cart.php">Cart</a>&nbsp;&nbsp;<br> <a href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
-						<?php
-						}
-						else
-						{	
-						?>
-						<a href="registration.php">New User</a>&nbsp;&nbsp;&nbsp;<br><a href="pre_login.php">Login</a>
-						<?php
-						}
-						?>	
+					?>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown"><?php echo $_SESSION['uid']; ?></a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="profile.php">Profile</a>
+								<a class="dropdown-item" href="cart.php">Cart</a>
+								<a class="dropdown-item" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">LogOut</a>
+							</div>
 						</li>
-					</ul>
-						<?php
+					<?php
 					}
-					else
-					{								
-					}
-					?>	
-				</li>
-				</ul>
-
-					  </div>
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="reservation.html">Reservation</a>
-								<a class="dropdown-item" href="stuff.html">Stuff</a>
-								<a class="dropdown-item" href="gallery.html">Gallery</a>
-							</div>
-						</li> -->
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="blog.html">blog</a>
-								<a class="dropdown-item" href="blog-details.html">blog Single</a>
-							</div>
-						</li> -->
-						<!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+					?>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<!-- End header -->
