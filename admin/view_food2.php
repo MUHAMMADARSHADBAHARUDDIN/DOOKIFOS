@@ -81,9 +81,9 @@
 					<td><?php echo $r['description']; ?></td>
 					<td><?php echo $r['price']; ?></td>
 					<td><img src="<?php echo $r['image']; ?>" width=70 height=70></td>
-                    <td><form action="updateFood.php" method="POST">
+                    <td><form action="updateFood2.php" method="POST">
 						<input type="hidden" name="foodIdToUpdate" value=<?php echo $r['id'];?> >
-						<input type="submit" value="UPDATE" class="update"name="updateFoodButton">
+						<input type="submit"  value="UPDATE" class="update"name="updateFoodButton">
 					</form></td>
 					<td><a href="delfood.php? a=<?php echo $r['id']; ?>" class="del" onclick="return confirm('Are you sure you want to delete?');">DELETE</a></td>
 				</tr>	
