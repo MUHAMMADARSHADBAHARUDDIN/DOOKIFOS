@@ -21,7 +21,6 @@
   display:inline-block;
  
 }
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -33,6 +32,17 @@
 		</div>
 	</div>
 <body>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 <center>
 <!--<p><a href="admin_login.php" class="button">Admin Login</a></p>-->
@@ -63,13 +73,24 @@
 										<input type="hidden" name="uID" class="form-control" value="'.$row['id'].'">
 										</div>
 										<div class="form-group">
-											Username : <input type="text" name="updateusername" class="form-control" value="'.$row['userid'].'">
+											Username <input type="text" name="updateusername" class="form-control" value="'.$row['userid'].'" required>
 										</div>
 										<div class="form-group">
-											Email : <input type="email" name="useremail" class="form-control" value="'.$row['email'].'">
+											Email <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" required>
 										</div>
 										<div class="form-group">
-											Password : <input type="password" name="userpassword" class="form-control" value="'.$row['password'].'">
+											Password <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'" required>
+											<input type="checkbox" onclick="myFunction()">Show Password
+										</div>
+										<div class="form-group">
+											Phone Number <input type="tel" name="tel" class="form-control" value="'.$row['tel'].'">
+										</div>
+
+										<div class="form-group">
+											Birth Date <input type="date" name="date" class="form-control" value="'.$row['date'].'">
+										</div>
+										<div class="form-group">
+											Address <input type="text" name="address" class="form-control" value="'.$row['address'].'">
 										</div>
 
 										<div class="form-group">
@@ -101,6 +122,9 @@
 						$updateusername = $_POST['updateusername'];
 						$useremail = $_POST['useremail'];
 						$userpassword = $_POST['userpassword'];
+						$date = $_POST['date'];
+						$address = $_POST['address'];
+						$tel = $_POST['tel'];
 						$i = "profileC/".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
 
@@ -108,14 +132,20 @@
 							$sql= 'update registration 
 							set  userid = "'.$updateusername.'",
 								password ="'.$userpassword.'", 
-								email="'.$useremail.'" 
+								email="'.$useremail.'",
+								date="'.$date.'",
+								address="'.$address.'",
+								tel="'.$tel.'"
 							where id = "'.$uID.'"';
 						}
 						else {
 							$sql= 'update registration 
 							set  userid = "'.$updateusername.'",
 								password ="'.$userpassword.'", 
-								email="'.$useremail.'", 
+								email="'.$useremail.'",
+								date="'.$date.'",
+								address="'.$address.'",
+								tel="'.$tel.'", 
 								profile="'.$i.'"
 							where id = "'.$uID.'"';		
 						}

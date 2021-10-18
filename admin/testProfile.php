@@ -34,6 +34,17 @@
 	</div>
 <body>
 
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
 <center>
 <!--<p><a href="admin_login.php" class="button">Admin Login</a></p>-->
 <p>
@@ -70,6 +81,7 @@
 										</div>
 										<div class="form-group">
 											Password : <input type="password" name="userpassword" class="form-control" value="'.$row['password'].'">
+											<input type="checkbox" onclick="myFunction()">Show Password
 										</div>
 
 										<div class="form-group">
