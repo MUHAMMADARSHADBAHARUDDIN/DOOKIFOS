@@ -74,13 +74,13 @@ function myFunction() {
 										<input type="hidden" name="uID" class="form-control" value="'.$row['id'].'">
 										</div>
 										<div class="form-group">
-											Username : <input type="text" name="updateusername" class="form-control" id="myInput" value="'.$row['adminid'].'">
+											Username : <input type="text" name="updateusername" class="form-control" value="'.$row['adminid'].'">
 										</div>
 										<div class="form-group">
 											Email : <input type="email" name="useremail" class="form-control" value="'.$row['email'].'">
 										</div>
 										<div class="form-group">
-											Password : <input type="password" name="userpassword" class="form-control" value="'.$row['password'].'">
+											Password : <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'">
 											<input type="checkbox" onclick="myFunction()">Show Password
 										</div>
 
