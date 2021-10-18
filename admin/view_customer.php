@@ -75,6 +75,9 @@
 				
 				<th>USER ID</th>
 				<th>EMAIL</th>
+				<th>TELEPHONE</th>
+				<th>ADDRESS</th>
+				<th>DATE OF BIRTH</th>
 				
 			</tr>
 			<?php 
@@ -87,6 +90,9 @@
 			  
 				<td><?php echo $s['userid']; ?></td>
 				<td><?php echo $s['email']; ?></td>
+				<td><?php echo $s['tel']; ?></td>
+				<td><?php echo $s['address']; ?></td>
+				<td><?php echo $s['date']; ?></td>
 				
 			</tr>	
 		<?php	
