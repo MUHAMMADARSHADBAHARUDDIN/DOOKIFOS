@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php include "header.php"; ?>	
-	<!-- Start slides -->
 	<br>
 	<div id="slides" class="cover-slides">
 		<ul class="slides-container">
@@ -49,9 +48,6 @@
 			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 		</div>
 	</div>
-	<!-- End slides -->
-	
-	<!-- Start About -->
 	<div class="about-section-box">
 		<div class="container">
 			<div class="row">
@@ -70,9 +66,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End About -->
-	
-	<!-- Start QT -->
 	<div class="qt-box qt-background">
 		<div class="container">
 			<div class="row">
@@ -85,10 +78,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End QT -->
-	
-	
-	<!-- Start Gallery -->
 	<div class="gallery-box">
 		<div class="container">
 			<div class="row">
@@ -100,8 +89,7 @@
 				</div>
 			</div>
 			<div class="tz-gallery">
-				<div class="row">
-					
+				<div class="row">					
 					<?php
 							include "connect.php";
 							$s = mysqli_query($con,"select * from gallery order by id desc limit 6");
@@ -112,9 +100,7 @@
 						
 							<a class="lightbox" href="<?php echo "admin/".$r['image']; ?>">
 								<img class="img-fluid"  src="<?php echo "admin/".$r['image']; ?>" alt="Gallery Images" style="width: 350px; height: 250px;"
-								>
-
-								
+								>								
 							</a>
 						</div>
 					<?php } ?>
@@ -122,9 +108,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Gallery -->
-	
-	<!-- Start Customer Reviews -->
 	<div class="customer-reviews-box">
 		<div class="container">
 			<div class="row">
@@ -165,10 +148,8 @@
 								<h6 class="text-dark m-0">Review : Good</h6>
 								<p class="m-0 pt-3">
 									Good Food, Good Health
-
 								</p>
-							</div>
-							
+							</div>							
 						</div>
 						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
 							<i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -183,5 +164,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Customer Reviews -->
 <?php include "footer.php"; ?>

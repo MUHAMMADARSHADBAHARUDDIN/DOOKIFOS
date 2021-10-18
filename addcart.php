@@ -1,8 +1,6 @@
 <?php session_start(); 
  include "header.php"; ?> 
 <body>
-	
-	<!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
 			<div class="row">
@@ -12,18 +10,12 @@
 			</div>
 		</div>
 	</div>
-	<!-- End All Pages -->
-	
-	<!-- Start Contact -->
-	
 	<div class="contact-box">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					
+				<div class="col-lg-12">				
 				</div>
 			</div>
-
 			<div class="row">
 				<div class="col-lg-12">
 
@@ -32,12 +24,9 @@
 		<table align="center" border="1" cellspacing="14" cellpadding="12" style="color: black" >
 
 			    <tr align="center">
-
 			    	<td style="color: red">  Product ID  </td>
-			    	<td> <input type="hidden" name="pid"  value="<?php echo $_GET['pid']; ?>"><?php echo $_GET['pid']; ?></td>
-			    	
+			    	<td> <input type="hidden" name="pid"  value="<?php echo $_GET['pid']; ?>"><?php echo $_GET['pid']; ?></td>			    	
 			    </tr>
-
 			    <tr align="center">
 			    	<td style="color: red">   Your USERID </td>
 			        <td> <input type="hidden" name="uid" value="<?php echo $_GET['uid']; ?>"><?php echo $_GET['uid']; ?></td>
@@ -68,19 +57,11 @@
 				include "connect.php";
 				mysqli_query($con,"insert into addcart(p_id,u_id,price,qty,total ) values('$pid','$uid','$price','$qty','$total')") or die(mysqli_error($con));
 				echo "<script>alert('Your data Is Add Inside Cart')</script>";
-
 			}
-
 			?>
-					
-
-
-
-
 				</div>
 			</div>
 		
 		</div>
 	</div>
-	<!-- End Contact -->
 <?php include "footer.php"; ?>

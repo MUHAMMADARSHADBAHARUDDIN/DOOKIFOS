@@ -2,7 +2,6 @@
 <?php include "header.php"; ?>
 <div style="height: 140px;"></div>
 <div style="width: 90%; margin: 0 auto; background-color: silver; padding: 50px;">
-
 <?php
 if(isset($_SESSION['uid']))
 {
@@ -17,20 +16,15 @@ if(isset($_SESSION['uid']))
 	{
 		$p_id = $r['p_id'];
 		mysqli_query($con,"insert into checkout(p_id, u_id,name,mobile,email,location) values('$p_id','$uid','$nm','$mo','$em','$ad')") or die("Error");
-	?>
-		
+	?>	
 	<?php
 	}
-
-
 ?>
-
 	<div style="background-color: #3b0878; font-size:2.3em; color: #b7e352;">Order Placed SuccessFully </div>
 	<div style="color: #4d2e1f; font-size:1.8em;"> 
 			More Detail to Contact 24x7 <br>
 			+603-8685-4439
 	</div>
-
 <?php
 }
 else
@@ -41,12 +35,6 @@ else
 <?php
 }	
 ?>
-
 </div>
 <br><br><br>
-
-
-
-<?php include "footer.php"; ?>    
-
-  
+<?php include "footer.php"; ?> 

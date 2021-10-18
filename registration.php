@@ -1,10 +1,6 @@
 <?php include "header.php"; ?>
 <link rel="stylesheet" type="text/css" href="buttonC.css">
-
-
 <body>
-	
-	<!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
 			<div class="row">
@@ -14,10 +10,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End All Pages -->
-	
-	<!-- Start Contact -->
-	
 	<div class="contact-box">
 		<div class="container">
 			<div class="row">
@@ -25,60 +17,42 @@
 					
 				</div>
 			</div>
-
 			<div class="row">
 				<div class="col-lg-12">
       <table cellpadding="10" cellspacing="12" align="left	">
      <form action="" method="POST"> 
-
 	 <tr>  
  <td> <input type="email" name="email" value="<?php echo isset($_POST['email'])?$_POST['email']:''?>" placeholder="Enter Your Email Address" required="" style="padding: 10px; width: 300%">  <br> </td>
 </tr>
-
 <tr>   
 <td align="center"> <input type="submit" class="button" name="generateCode" value="Get Your Code" >  <br> </td>
    </tr>
-<tr>  
-	
+<tr>  	
   <tr>
   	<td>
   <input type="text" name="uid" value="" placeholder="Enter user id"  style="padding: 10px; width: 300%"> <br>  </td>
     </tr>
-   
    <tr>	
  <td> <input type="password" name="pass" value="" placeholder=" Enter Your password"  style="padding: 10px; width: 300%"> <br> </td>
    </tr>
-
-
-
  <td> <input type="code" name="code" value="" placeholder="Enter Your Code"  style="padding: 10px; width: 300%">  <br> </td>
-</tr>
-         
+</tr>       
       <tr>   
 <td align="center"> <input type="submit" class="button" name="registerUser" value="Register Now" >  <br> </td>
-   </tr>
-    	
+   </tr>  	
     </form>
  </table>
-
 					<?php
 					$servername = "localhost";
 				    $username = "root";
 				    $password = "";
 				    $dbname = "dookki_db";
-				    
-					//include "connect.php";
                     include "mail.php";
 
-					// Create connection
                     $conn = mysqli_connect('localhost','root','','dookki_db');
-                    // Check connection
                     if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                     }
-					
-					
-
 					if(isset($_POST['generateCode']))
 					{
 						$uid = $_POST['uid'];
@@ -92,18 +66,12 @@
 							echo"<script>alert('Sorry... email already being used.');</script>";
 						}
 						else {
-						//include "mail.php";
 						mysqli_query($conn,"insert into tempcode(tCode) values('$randCode')");
-						emailVerification("mikhail.shahmie@gmail.com", $email, "Register User Verification", $randCode);
-						
+						emailVerification("mikhail.shahmie@gmail.com", $email, "Register User Verification", $randCode);						
 						}
 					}
-
-					//echo"<script>alert('$rcode');</script>";
-
 					if(isset($_POST['registerUser']))
-					{
-						
+					{						
 						$uid = $_POST['uid'];
 						$pass = $_POST['pass'];
 						$email = $_POST['email'];
@@ -115,15 +83,13 @@
 						}
 						else { 
 
-
 						$sql_u = "SELECT * FROM registration WHERE userid='$uid'";
 						$res_u = mysqli_query($conn, $sql_u);
 						if (mysqli_num_rows($res_u) > 0) 
 						{
 							echo"<script>alert('Sorry... username already being used.');</script>";
 						}
-						else {
-							
+						else {							
 							$sql_cd = "SELECT * FROM tempcode";
 							$s = mysqli_query($conn,$sql_cd);
 							while($rcode = mysqli_fetch_array($s))
@@ -133,50 +99,21 @@
 									mysqli_query($conn,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
 									echo "<script>alert('Registration SuccessFully');</script>";
 									mysqli_query($conn,"DELETE from tempcode");
-									//$rcode = mysqli_query($conn, $sql_cd);
 									$URL="login.php";
 									echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
 									echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-									//$s = mysqli_query($conn,"select * from registration where userid='$uid' and password='$pass'");new
-									/*if($r = mysqli_fetch_array($s))
-									{
-										
-										$_SESSION['uid'] = $uid;
-										$URL="menu.php";
-										echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-										echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-	
-									}*/
-									//$URL="menu.php";
-									//echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-									//echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-									
-									//echo "<center>Registration SuccessFully ... Click to <a href='login.php'>login</a></center>";
 								}
 								else
 								{
 									echo "<script>alert('Registration Fail, please try again');</script>"; 
 								}
-							}
-							
-							
+							}							
+					}						
+				}						
 					}	
-						
-				}
-						
-					}	
-
 					?>
-
-
-
-
-
 				</div>
-			</div>
-		
+			</div>		
 		</div>
 	</div>
-	<!-- End Contact -->
-
 <?php include "footer.php"; ?>

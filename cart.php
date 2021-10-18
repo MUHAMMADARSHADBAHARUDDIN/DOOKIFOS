@@ -3,12 +3,10 @@
  include "header.php"; ?>
 <style type="text/css">
 	tr{
-
 	}
 	tr:hover{
 		background-color: lightgreen;
 		color: black;
-
 	}
 </style>
 <div style="height: 150px;"></div>
@@ -33,7 +31,6 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 			<th>Total</th>
 			<th>Remove</th>
 		</tr>
-
 		<?php
 			while($r = mysqli_fetch_array($s))
 			{
@@ -44,10 +41,7 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 				<td><?php echo $r['qty']; ?></td>
 				<td><?php echo $r['total']; ?></td>
 				<td><a href="deletecart.php?id=<?php echo $r['id']; ?>">Delete</a></td>
-
-			</tr>
-			
-		
+			</tr>		
 		<?php
 		}
 		?>
@@ -57,8 +51,6 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 			<a href="checkout.php">Check Out</a> 
 		</div>
 	</div>
-
-
 </div>
 <?php
 include "footer.php";

@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php include  "header.php"; ?>
-	<!-- Start All Pages -->
 	<div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
 			<div class="row">
@@ -10,9 +9,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End All Pages -->
-	
-	<!-- Start Menu -->
 	<div class="menu-box">
 		<div class="container">
 			<div class="row">
@@ -22,8 +18,7 @@
 						<p>Every day is a good day for your restaurant</p>
 					</div>
 				</div>
-			</div>
-			
+			</div>		
 			<div class="row inner-menu-box">
 				<div class="col-3">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -32,8 +27,7 @@
 						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Side Menu</</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Beverages</a>
 					</div>
-				</div>
-				
+				</div>			
 				<div class="col-9">
 					<div class="tab-content" id="v-pills-tabContent">
 						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -70,18 +64,13 @@
 								<?php } ?>
 							</div>	
 						</div>
-
-
 						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							<div class="row">
-
-
 							<?php include "connect.php";
 								$s = mysqli_query($con,"select * from menu where category='mainmenu'");
 								while($r = mysqli_fetch_array($s))
 								{	
 								?>
-
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
 										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
@@ -94,7 +83,6 @@
 									{
 									?>
 											<a href="addcart.php?pid=<?php echo $r['id']; ?>&uid=<?php echo $_SESSION['uid']; ?>&price=<?php echo $r['price']; ?>">Add Cart</a></h5>
-
 									<?php
 									}
 									else
@@ -102,23 +90,15 @@
 									?>
 										<a href="login.php">Add Cart</a>
 									<?php } ?>
-
-
-
-
 											</h5>
 										</div>
 									</div>
 								</div>
-								<?php } ?>
-								
-								
-							</div>
-							
+								<?php } ?>								
+							</div>							
 						</div>
 						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-							<div class="row">
-								
+							<div class="row">								
 								<?php include "connect.php";
 								$s = mysqli_query($con,"select * from menu where category='sidemenu'");
 								while($r = mysqli_fetch_array($s))
@@ -144,16 +124,11 @@
 									?>
 										<a href="login.php">Add Cart</a>
 									<?php } ?>
-
-
 											</h5>
 										</div>
 									</div>
 								</div>
-								<?php } ?>
-								
-								
-								
+								<?php } ?>								
 							</div>
 						</div>
 						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
@@ -183,8 +158,6 @@
 									?>
 										<a href="login.php">Add Cart</a>
 									<?php } ?>
-	
-
 											</h5>
 										</div>
 									</div>
@@ -197,9 +170,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Menu -->
-
-<!-- Start Customer Reviews -->
 	<div class="customer-reviews-box">
 		<div class="container">
 			<div class="row">
@@ -240,10 +210,8 @@
 								<h6 class="text-dark m-0">Review : Good</h6>
 								<p class="m-0 pt-3">
 									Good Food, Good Health
-
 								</p>
-							</div>
-							
+							</div>							
 						</div>
 						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
 							<i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -258,6 +226,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- End Customer Reviews -->
 <?php include "footer.php" ?>	
 

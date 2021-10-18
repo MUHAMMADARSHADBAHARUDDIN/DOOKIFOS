@@ -1,10 +1,6 @@
 <?php session_start(); ?>
 <?php include "header.php"; ?>
-	<!-- Start header -->
 	<img src="aboutus.png" width="100%">
-	<!-- End header -->
-	
-	<!-- Start About -->
 	<div class="about-section-box">
 		<div class="container">
 			<div class="row">
@@ -15,7 +11,6 @@
 						<p>Restaurant in Putrajaya, Wilayah Persekutuan Kuala Lumpur </p>
 						<p>Deliciousness jumping into the mouth<br> 
 							We know our food..</p>
-						<!--<a class="btn btn-lg btn-circle btn-outline-new-white" href="#"> Comment</a> -->
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6">
@@ -29,7 +24,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End About -->
-	
+	</div>	
 	<?php include "footer.php" ; ?>

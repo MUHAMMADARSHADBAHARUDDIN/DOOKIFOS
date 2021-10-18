@@ -57,13 +57,10 @@ function myFunction() {
 				$conn = mysqli_connect('localhost','root','','dookki_db');
 				$currentUser = $_SESSION['uid'];
 				$sql = "SELECT * FROM registration WHERE userid  = '$currentUser'";
-
 					$gotResults = mysqli_query($conn,$sql);
-
 					if($gotResults){
 						if(mysqli_num_rows($gotResults)>0){
 							while($row = mysqli_fetch_array($gotResults)){
-								//print_r($row['userid']);
 								echo'
 									<div class="col-md-6">
 										<div class="form-group">
@@ -98,10 +95,8 @@ function myFunction() {
 										</div>
 										<div class="form-group">
 											<input type="submit" name="updateProfile" class="btn btn-info" value="Update">
-										</div>
-										
-									</div>';
-							
+										</div>									
+									</div>';							
 							}
 						}
 					}
@@ -109,7 +104,6 @@ function myFunction() {
 				 <?php
 				 if(isset($_POST['updateProfile']))
 				 {
-					//echo " Update executed";
 					 $con = mysqli_connect("localhost","root","","dookki_db");
 					 if(!$con)
 						 {
@@ -117,7 +111,6 @@ function myFunction() {
 						 }
 					 else
 					 {
-						//echo "cmd executed";
 						$uID = $_POST['uID'];
 						$updateusername = $_POST['updateusername'];
 						$useremail = $_POST['useremail'];
@@ -154,8 +147,7 @@ function myFunction() {
 							echo "Record updated successfully";
 						} else {
 							echo "Error updating record: " . mysqli_error($con);
-						}
-				   	  
+						}			   	  
 		            mysqli_close($con);
 					session_destroy();
 		            $URL="login.php";

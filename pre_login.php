@@ -17,9 +17,7 @@
   margin: 4px 2px;
   cursor: pointer;
   display:inline-block;
- 
 }
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -33,9 +31,7 @@
 <body>
 
 <center>
-<!--<p><a href="admin_login.php" class="button">Admin Login</a></p>-->
 <p>
-
 
 </p>
 <p><a href="admin_login.php" class="button">Admin Login</a></p>
