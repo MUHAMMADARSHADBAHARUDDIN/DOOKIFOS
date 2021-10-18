@@ -40,28 +40,29 @@
 	        	$qryCustomerList = searchByEmail();
 			else
 				$qryCustomerList = getListOfCustomer();
-			?>		
-			<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">	
-			<tr>			
+			?>
+			<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
+			<tr>
 				<th>USER ID</th>
 				<th>EMAIL</th>
 				<th>TELEPHONE</th>
 				<th>ADDRESS</th>
-				<th>DATE OF BIRTH</th>				
+				<th>DATE OF BIRTH</th>
+				<th>PROFILE</th>	
 			</tr>
 			<?php 
 		while($s = mysqli_fetch_assoc($qryCustomerList))
 		{
 			?>
 			<tr align=center>
-			  
 				<td><?php echo $s['userid']; ?></td>
 				<td><?php echo $s['email']; ?></td>
 				<td><?php echo $s['tel']; ?></td>
 				<td><?php echo $s['address']; ?></td>
-				<td><?php echo $s['date']; ?></td>				
+				<td><?php echo $s['date']; ?></td>
+				<td><img src="../<?php echo $s['profile']; ?>" width=70 height=70></td>	
 			</tr>	
-		<?php		
+		<?php	
 			}
 			?>
    		</table>
@@ -79,8 +80,8 @@
 					
 					echo '<input type="submit" value="Display All"
 							name="displayAllButton">';
-				echo '</fieldset>';
-			echo '</form><br>';		
+                	echo '</fieldset>';
+			echo '</form><br>';
 		} 
 		?>
 </div>
