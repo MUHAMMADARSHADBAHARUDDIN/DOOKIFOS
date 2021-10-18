@@ -6,9 +6,7 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-
-	}
-	
+	}	
 	.del{
 		color: red;
 		text-decoration: none;
@@ -23,8 +21,6 @@
 		background-color: black;
 		padding: 10px;
 	}
-
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -36,12 +32,10 @@
 		</div>
 	</div>
 <div class="content">
-<br>
-	
+<br>	
 	<form action="" method="post" enctype="multipart/form-data">
 	<center>
 	<table border=0  cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
-
 		<tr> 
 			<center>
 			<th colspan="2">Upload Your Image Here &nbsp;&nbsp;&nbsp;&nbsp; </th>
@@ -59,19 +53,13 @@
 		<tr>
 			<th>&nbsp;</th>
 		</tr>
-
-	
-
 	</table>
 	</form>
 	<?php
 	if(isset($_POST['sb']))
-	{
-		
+	{		
 		$i = "img/".$_FILES['img']['name'];
-		move_uploaded_file($_FILES['img']['tmp_name'], $i);//move file inside folder
-
-		
+		move_uploaded_file($_FILES['img']['tmp_name'], $i);//move file inside folder		
 		include "connect.php";
 		mysqli_query($con,"insert into gallery(image)values('$i')") or die(mysqli_error($con));
 		echo "<div style='padding:15px; color:red; background-color:black; font-size:1.2em; border-radius:10px;'>Data Uploaded SuccessFully....</div>";

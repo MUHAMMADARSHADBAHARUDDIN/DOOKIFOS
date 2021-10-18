@@ -3,7 +3,6 @@
 <?php include "header.php"; ?>
 <?php include "foodFunction.php"; ?>
 <link rel="stylesheet" type="text/css" href="button.css">
-
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -18,24 +17,16 @@
 	<br><br>
 	<form action="" method="post" enctype="multipart/form-data">
 	<table border=0 align="center" bgcolor="white" width="65%" style="box-shadow: 1px 3px 15px 2px;" cellpadding="10" cellspacing="15" >
-	
-
 	<tr align="center">
 			<td class="title">Upload New Food</td><td><a href="view_food2.php" style="color: red; text-decoration: none;">View All Foods</a></td>
-    </tr>
-    
+    </tr>  
    <?php
-
    $foodId = $_POST['foodIdToUpdate'];
    $foodQry = getFoodInformation($foodId);
-
-   $foodRecord = mysqli_fetch_assoc($foodQry);
-   
+   $foodRecord = mysqli_fetch_assoc($foodQry); 
    echo' 
-   <tr align="center">
-   
-   <form action="foodProcess.php" method="POST">
-  
+   <tr align="center">  
+   <form action="foodProcess.php" method="POST"> 
    <td> Food ID</td>
    <td><label>'.$foodRecord['id'].'</label></td>
    <td><input type="hidden" name="foodId" value="'.$foodRecord['id'].'" placeholder="" class="text" required></td>
@@ -52,7 +43,6 @@
 					<option value="sidemenu">Side Menu</option>
 					<option value="beverages">Beverages</option>
 				</select>
-
    	    </td>
    	   <tr align="center">
    	   	    <td> Enter Title</td>
@@ -62,22 +52,18 @@
             <td> Enter Food Detail </td>
 			<td><input type="text" name="desc" value="'.$foodRecord['description'].'" placeholder="" class="text" required></td>
 	</tr>
-
 	<tr align="center"> 
             <td> Enter Food price </td>
 			<td> <input type="text" name="price" value="'.$foodRecord['price'].'" class="text"> </td>
 	</tr>
-
     <tr align="center"> 
             <td> Enter Food Image </td>
 			<td><img src="'.$foodRecord['image'].'" width=200 height=200>
             <br><br><input type="File" name="img" value="'.$foodRecord['image'].'" placeholder="" class="" ></td>
 	</tr>
-
     <tr>    
     	<td colspan=2 align="center"> <input type="submit" name="UpdateFood" value="Update Food" class="button"> </td>
     </tr>
-
 </table>
 </form>'
 ?>

@@ -6,15 +6,7 @@
 	tr{
 		font-size: 1.2em;
         color: black
-
 	}
-	
-	
-
-	}
-	/*th{
-		color: black;
-		font-size: 1.3em;*/
 	}
 	.del{
 		color: red;
@@ -25,15 +17,12 @@
 		text-decoration: none;
 		text-shadow: 2px 3px 2px #FFFFFF;
 	}
-
-
 </style>
 <br><br>
 <div class="content">
 	<?php
 		$a = $_GET['a'];
 		mysqli_query($con,"delete from review where id='$a'");
-
 	?>
 		<div style="color: red; font-size: 1.4em; font-weight: bold; border-radius:10px;  padding: 10px; text-align: center;">Data Deleted SuccessFully</div>
 		<br><br>
@@ -59,8 +48,6 @@
 		<?php	
 			}
 		?>
-
-
 	</table>	
     <br><br>
 </div>

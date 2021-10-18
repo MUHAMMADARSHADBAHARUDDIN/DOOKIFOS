@@ -3,14 +3,10 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-
-
 	}
 	tr:hover{
 		background-color: black;
 		color: white;
-	
-
 	}
 	th{
 		color: tomato;
@@ -25,15 +21,12 @@
 		text-decoration: none;
 		text-shadow: 2px 3px 2px #FFFFFF;
 	}
-
-
 </style>
 <div class="content">
 	<?php
 		$a = $_GET['a'];
 		mysqli_query($con,"DELETE from menu where id='$a'");
 		header("location:view_food.php");
-	?>
-		
+	?>		
 </div>
 <?php include "footer.php"; ?>

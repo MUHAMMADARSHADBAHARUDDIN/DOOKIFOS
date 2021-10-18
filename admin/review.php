@@ -6,14 +6,7 @@
 	tr{
 		font-size: 1.2em;
 		color: black;
-
-
 	}
-	/*tr:hover{
-		background-color: black;
-		color: white;*/
-	
-
 	}
 	th{
 		color: tomato;
@@ -28,8 +21,6 @@
 		text-decoration: none;
 		text-shadow: 2px 3px 2px #FFFFFF;
 	}
-
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -44,7 +35,6 @@
 <div class="content">
 	<center>
 	<table border=1 width="80%" cellspacing="3" cellpadding="5" style="box-shadow: 5px 4px 10px 2px;">
-
 		<tr>
 			<th>ID</th><th>NAME</th><th>FEEDBACKS</th><th>COMMENTS</th><th>REMOVE</th>
 		</tr>
@@ -63,11 +53,7 @@
 		<?php	
 			}
 		?>
-
-
 	</table>	
-
-
 </div>
 <br>
 <?php include "footer.php"; ?>

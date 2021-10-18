@@ -1,6 +1,5 @@
 <?php
 include "foodFunction.php";
-//print_r($_POST);
 echo "executed";
 if(isSet($_POST['UpdateFood']))
 	{

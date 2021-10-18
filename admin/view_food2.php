@@ -6,9 +6,7 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-		color: black/*#26947e*/;
-
-
+		color: black;
 	}
 	.del{
 		color: red;
@@ -20,27 +18,6 @@
 		color: green;
 		text-decoration: none;
 	}
-	/*tr:hover{
-		background-color: grey;
-		color: white;
-	
-
-	}
-	th{
-		color: tomato;
-		font-size: 1.3em;
-	}
-	.del{
-		color: red;
-		text-decoration: none;
-	}
-	.del:hover{
-		color: blue;
-		text-decoration: none;
-		text-shadow: 2px 3px 2px #FFFFFF;*/
-	}
-
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -54,10 +31,8 @@
 <div class="content">
 <a href="food.php" class = button>Add New Food</a>	
 <br>
-
 	<center>
 	<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
-
 		<tr>
 		    <th>FOOD ID</th>
 			<th>CATEGORY</th>
@@ -91,8 +66,6 @@
 			}
 		?>
    </table>	
-
-
 </div>
 <br>
 <?php include "footer.php"; ?>

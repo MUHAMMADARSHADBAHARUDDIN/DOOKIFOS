@@ -19,9 +19,7 @@
   margin: 4px 2px;
   cursor: pointer;
   display:inline-block;
- 
 }
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -33,7 +31,6 @@
 		</div>
 	</div>
 <body>
-
 <script>
 function myFunction() {
   var x = document.getElementById("myInput");
@@ -44,12 +41,8 @@ function myFunction() {
   }
 }
 </script>
-
 <center>
-<!--<p><a href="admin_login.php" class="button">Admin Login</a></p>-->
 <p>
-
-
 </p>
 	<div class="row">
 		<div class="col-md-8 offset-2">
@@ -58,13 +51,10 @@ function myFunction() {
 				$conn = mysqli_connect('localhost','root','','dookki_db');
 				$currentUser = $_SESSION['uid'];
 				$sql = "SELECT * FROM admin WHERE adminid  = '$currentUser'";
-
 					$gotResults = mysqli_query($conn,$sql);
-
 					if($gotResults){
 						if(mysqli_num_rows($gotResults)>0){
 							while($row = mysqli_fetch_array($gotResults)){
-								//print_r($row['userid']);
 								echo'
 									<div class="col-md-6">
 										<div class="form-group">
@@ -89,10 +79,8 @@ function myFunction() {
 										</div>
 										<div class="form-group">
 											<input type="submit" name="updateProfile" class="btn btn-info" value="Update">
-										</div>
-										
-									</div>';
-							
+										</div>									
+									</div>';						
 							}
 						}
 					}
@@ -100,7 +88,6 @@ function myFunction() {
 				 <?php
 				 if(isset($_POST['updateProfile']))
 				 {
-					//echo " Update executed";
 					 $con = mysqli_connect("localhost","root","","dookki_db");
 					 if(!$con)
 						 {
@@ -108,15 +95,12 @@ function myFunction() {
 						 }
 					 else
 					 {
-						//echo "cmd executed";
-						//$uID = $_POST['uID'];
                         $uID = $_POST['uID'];
 						$updateusername = $_POST['updateusername'];
 						$useremail = $_POST['useremail'];
 						$userpassword = $_POST['userpassword'];
 						$i = "profileC/".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
-
 						if ($_FILES['picture']['size'] == 0) {
 							$sql= 'update admin 
 							set  adminid = "'.$updateusername.'",
@@ -137,8 +121,7 @@ function myFunction() {
 							echo "Record updated successfully";
 						} else {
 							echo "Error updating record: " . mysqli_error($con);
-						}
-				   	  
+						}	   	  
 		            mysqli_close($con);
                     session_destroy();
 		            $URL="../admin_login.php";

@@ -34,17 +34,9 @@ function showUser(str) {
 	<br><br>
 	<form action="" method="post" enctype="multipart/form-data">
 	<table border=0 align="center" bgcolor="white" width="65%" style="box-shadow: 1px 3px 15px 2px;" cellpadding="10" cellspacing="15" >
-	
-
 	<tr align="center">
 			<td class="title">Upload New Food</td><td><a href="view_food2.php" style="color: red; text-decoration: none;">View All Foods</a></td>
     </tr>
-	<!--<tr align="center">
-   	   	    <td> Enter Food ID</td>
-   	   	    <td><input type="text" name="foodId" value="" placeholder="" class="text" required></td>
-   	   </tr> -->
-    
-	
    <tr align="center">   
    		<td>Choose Food Category</td>
    	    <td> 
@@ -54,7 +46,6 @@ function showUser(str) {
    	    		<option value="beverages">Beverages</option>
    	    	</select>
    	    </td>
-
    	   <tr align="center">
    	   	    <td> Enter Title</td>
    	   	    <td><input type="text" name="title" value="" placeholder="" class="text" required></td>
@@ -63,21 +54,17 @@ function showUser(str) {
             <td> Enter Food Detail </td>
 			<td><textarea rows="4" name="detail" cols="40" class="text" style="background-color: black; color: white; padding: 10px;"></textarea></td>
 	</tr>
-
 	<tr align="center"> 
             <td> Enter Food price </td>
 			<td> <input type="text" name="price" class="text"> </td>
 	</tr>
-
     <tr align="center"> 
             <td> Enter Food Image </td>
 			<td><input type="File" name="img"  placeholder="" class="" required></td>
 	</tr>
-
     <tr>    
     	<td colspan=2 align="center"> <input type="submit" name="s" value="Add Food" class="button"> </td>
     </tr>
-
 </table>
 </form>
 <?php
@@ -92,8 +79,7 @@ if(isset($_POST['s']))
 		move_uploaded_file($_FILES['img']['tmp_name'], $i);
 		include "connect.php";
 		mysqli_query($con,"insert into menu (id,category,title,description,price,image) values('$fid','$cat','$title','$det','$price','$i')");
-		echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";
-		
+		echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";	
 }
 ?>	
 </div>

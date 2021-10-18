@@ -2,7 +2,6 @@
 	include "connect.php";
 	$aid = $_POST['aid'];
 	$pass = $_POST['pass'];
-
 	$sql = mysqli_query($con,"select * from admin where adminid='$aid' and password='$pass'");
 	if(mysqli_fetch_array($sql))
 	{

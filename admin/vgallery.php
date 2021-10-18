@@ -5,9 +5,7 @@
 <style type="text/css">
 	tr{
 		font-size: 1.2em;
-
-	}
-	
+	}	
 	.del{
 		color: red;
 		text-decoration: none;
@@ -22,8 +20,6 @@
 		background-color: black;
 		padding: 10px;
 	}
-
-
 </style>
 <div class="all-page-title page-breadcrumb">
 		<div class="container text-center">
@@ -35,10 +31,8 @@
 		</div>
 	</div>
 <div class="content">
-	<center><a href="gallery.php" >Upload Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	
-	<?php include "connect.php";
-		
+	<center><a href="gallery.php" >Upload Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+	<?php include "connect.php";		
 	 ?>
 		<table border=0 cellpadding="10" cellspacing="5">
 			<?php
@@ -58,7 +52,6 @@
 	           $r++;
 	        }
 	        ?>
-
 		</table>
 		<br><br>	
 </div>
