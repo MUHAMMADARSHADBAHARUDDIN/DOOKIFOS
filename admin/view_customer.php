@@ -13,6 +13,8 @@
 		text-decoration: none;
 	}
 	.update{
+		border: none;
+        background: none;
 		color: green;
 		text-decoration: none;
 	}
@@ -43,24 +45,35 @@
 			?>
 			<table border=1 width="80%" cellspacing="5" cellpadding="5" style="box-shadow: 5px 4px 10px 2px; ">
 			<tr>
+				<!--<th>Database ID</th>-->
+				
 				<th>USER ID</th>
 				<th>EMAIL</th>
 				<th>TELEPHONE</th>
 				<th>ADDRESS</th>
 				<th>DATE OF BIRTH</th>
-				<th>PROFILE</th>	
+				<th>PROFILE</th>
+				<th>UPDATE</th>
+				<th>DELETE</th>	
 			</tr>
 			<?php 
+			include "customerFunction.php";
 		while($s = mysqli_fetch_assoc($qryCustomerList))
 		{
 			?>
 			<tr align=center>
+			    
 				<td><?php echo $s['userid']; ?></td>
 				<td><?php echo $s['email']; ?></td>
 				<td><?php echo $s['tel']; ?></td>
 				<td><?php echo $s['address']; ?></td>
 				<td><?php echo $s['date']; ?></td>
-				<td><img src="../<?php echo $s['profile']; ?>" width=70 height=70></td>	
+				<td><img src="../<?php echo $s['profile']; ?>" width=70 height=70></td>
+				<td><form action="updateCustomer.php" method="POST">
+					<input type="hidden" name="customerIdToUpdate" value=<?php echo $s['userid'];?> >
+					<input type="submit"  value="UPDATE" class="update"name="updateCustomerButton">
+				</form></td>
+				<td><a href="delCustomer.php? a=<?php echo $s['userid']; ?>" class="del" onclick="return confirm('Are you sure you want to delete?');">DELETE</a></td>	
 			</tr>	
 		<?php	
 			}

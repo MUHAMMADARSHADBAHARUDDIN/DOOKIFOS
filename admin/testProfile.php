@@ -95,12 +95,19 @@ function myFunction() {
 						 }
 					 else
 					 {
-                        $uID = $_POST['uID'];
+						$uID = $_POST['uID'];
 						$updateusername = $_POST['updateusername'];
 						$useremail = $_POST['useremail'];
 						$userpassword = $_POST['userpassword'];
 						$i = "profileC/".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
+						if (($updateusername == NULL) || ($useremail == NULL) || ($userpassword == NULL))
+						{
+							echo"<script>alert('Pls ensure all field is not blank!');</script>";
+						}
+						else { 
+
+                       
 						if ($_FILES['picture']['size'] == 0) {
 							$sql= 'update admin 
 							set  adminid = "'.$updateusername.'",
@@ -128,7 +135,9 @@ function myFunction() {
 		            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
 		            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 				 }
+				
 				}
+			}
         	?>
 			</form>
 		</div>

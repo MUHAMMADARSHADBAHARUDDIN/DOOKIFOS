@@ -1,6 +1,7 @@
 <?php session_start();
     $uid = $_SESSION['uid'];
     include "header.php"; ?>
+	<?php include "customerFunction.php"; ?>
 <!DOCTYPE html>
 <html>
 <style>
@@ -54,55 +55,46 @@ function myFunction() {
 		<div class="col-md-8 offset-2">
 			<form method="post" action="" enctype="multipart/form-data">
 				<?php
-				$conn = mysqli_connect('localhost','root','','dookki_db');
-				$currentUser = $_SESSION['uid'];
-				$sql = "SELECT * FROM registration WHERE userid  = '$currentUser'";
-					$gotResults = mysqli_query($conn,$sql);
-					if($gotResults){
-						if(mysqli_num_rows($gotResults)>0){
-							while($row = mysqli_fetch_array($gotResults)){
+				 $customerId = $_POST['customerIdToUpdate'];
+                 $customerQry = getCustomerInformation($customerId);
+                 $customerRecord = mysqli_fetch_assoc($customerQry); 
 								echo'
 									<div class="col-md-6">
 										<div class="form-group">
-											<img src="'.$row['profile'].'" height="150" width="125">
+											<img src="'.$customerRecord['profile'].'" height="150" width="125">
 										</div>
 										<div class="form-group">
-										<input type="hidden" name="uID" class="form-control" value="'.$row['id'].'">
+										<input type="hidden" name="uID" class="form-control" value="'.$customerRecord['id'].'">
 										</div>
 										<div class="form-group">
-											Username <input type="text" name="updateusername" class="form-control" value="'.$row['userid'].'">
+											Username <input type="text" name="updateusername" class="form-control" value="'.$customerRecord['userid'].'" required>
 										</div>
 										<div class="form-group">
-											Email <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" >
+											Email <input type="email" name="useremail" class="form-control" value="'.$customerRecord['email'].'" required>
 										</div>
+										
 										<div class="form-group">
-											Password <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'" >
-											<input type="checkbox" onclick="myFunction()">Show Password
-										</div>
-										<div class="form-group">
-											Phone Number <input type="tel" name="tel" class="form-control" value="'.$row['tel'].'">
+											Phone Number <input type="tel" name="tel" class="form-control" value="'.$customerRecord['tel'].'">
 										</div>
 
 										<div class="form-group">
-											Birth Date <input type="date" name="date" class="form-control" value="'.$row['date'].'">
+											Birth Date <input type="date" name="date" class="form-control" value="'.$customerRecord['date'].'">
 										</div>
 										<div class="form-group">
-											Address <input type="text" name="address" class="form-control" value="'.$row['address'].'">
+											Address <input type="text" name="address" class="form-control" value="'.$customerRecord['address'].'">
 										</div>
 
 										<div class="form-group">
-											Change Profile Picture<input type="File" name="picture" value="'.$row['profile'].'"class="form-control">
+											Change Profile Picture<input type="File" name="picture" value="'.$customerRecord['profile'].'"class="form-control">
 										</div>
 										<div class="form-group">
-											<input type="submit" name="updateProfile" class="btn btn-info" value="Update">
+											<input type="submit" name="updateCustomer" class="btn btn-info" value="Update">
 										</div>									
 									</div>';							
-							}
-						}
-					}
-				?>
+							
+					?>
 				 <?php
-				 if(isset($_POST['updateProfile']))
+				 if(isset($_POST['updateCustomer']))
 				 {
 					 $con = mysqli_connect("localhost","root","","dookki_db");
 					 if(!$con)
@@ -111,34 +103,19 @@ function myFunction() {
 						 }
 					 else
 					 {
+						 
 						$uID = $_POST['uID'];
 						$updateusername = $_POST['updateusername'];
 						$useremail = $_POST['useremail'];
-						$userpassword = $_POST['userpassword'];
 						$date = $_POST['date'];
 						$address = $_POST['address'];
 						$tel = $_POST['tel'];
-						$i = "profileC/".$_FILES['picture']['name'];
-						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
-						if (($updateusername == NULL) || ($useremail == NULL) || ($userpassword == NULL) || ($date == NULL) || ($address == NULL) || ($tel == NULL))
-						{
-							echo"<script>alert('Pls ensure all field is not blank!');</script>";
-						}
-						else { 
-						$uID = $_POST['uID'];
-						$updateusername = $_POST['updateusername'];
-						$useremail = $_POST['useremail'];
-						$userpassword = $_POST['userpassword'];
-						$date = $_POST['date'];
-						$address = $_POST['address'];
-						$tel = $_POST['tel'];
-						$i = "profileC/".$_FILES['picture']['name'];
+						$i = "../profile".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
 
 						if ($_FILES['picture']['size'] == 0) {
 							$sql= 'update registration 
 							set  userid = "'.$updateusername.'",
-								password ="'.$userpassword.'", 
 								email="'.$useremail.'",
 								date="'.$date.'",
 								address="'.$address.'",
@@ -148,7 +125,6 @@ function myFunction() {
 						else {
 							$sql= 'update registration 
 							set  userid = "'.$updateusername.'",
-								password ="'.$userpassword.'", 
 								email="'.$useremail.'",
 								date="'.$date.'",
 								address="'.$address.'",
@@ -163,13 +139,12 @@ function myFunction() {
 							echo "Error updating record: " . mysqli_error($con);
 						}			   	  
 		            mysqli_close($con);
-					session_destroy();
-		            $URL="login.php";
+					
+		            $URL="view_customer.php";
 		            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
 		            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
 				 }
 				}
-			}
         	?>
 			</form>
 		</div>
