@@ -15,7 +15,10 @@ if(isset($_SESSION['uid']))
 	while($r = mysqli_fetch_array($s))
 	{
 		$p_id = $r['p_id'];
-		mysqli_query($con,"insert into checkout(p_id, u_id,name,mobile,email,location) values('$p_id','$uid','$nm','$mo','$em','$ad')") or die("Error");
+		$q = $r['qty'];
+		$t = $r['total'];
+		mysqli_query($con,"insert into checkout(p_id, u_id,name,mobile,email,location,qty,total) values('$p_id','$uid','$nm','$mo','$em','$ad','$q','$t')") or die("Error");
+		mysqli_query($con,"DELETE from addcart WHERE u_id ='$uid'");
 	?>	
 	<?php
 	}

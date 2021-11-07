@@ -34,7 +34,7 @@
 	<center>
 	<table border=1 cellpadding="6" cellspacing="8" style="box-shadow: 5px 4px 10px 2px;  background-color:">
 		<tr>
-			 <th colspan="9">CUSTOMER ORDER</th>
+			 <th colspan="9">YOUR ORDER</th>
 		</tr>
 		<tr>
 		    <th hidden > ID</th>
@@ -49,9 +49,11 @@
 			<th>Total</th>
 			<th>Status</th>
 			
+			
 		</tr>
 		<?php
-		$s = mysqli_query($con,"select * from checkout");
+		$currentUser = $_SESSION['uid'];
+		$s = mysqli_query($con,"SELECT * FROM checkout WHERE u_id  = '$currentUser'");
 		while($r = mysqli_fetch_array($s))
 		{
 		?>
@@ -75,7 +77,7 @@
 			<?php
 				if ($r['status'] == 0)
 					{ ?>
-					<td><a href="updateStatus.php? a=<?php echo $r['id']; ?>" class="del" onclick="return confirm('Are you sure you want to deliver?');">Ordered</a></td>
+					<th class = del>Ordered</th>
 					<?php
 					}
 				else
@@ -87,6 +89,7 @@
 		}	
 	}
 		?>
+		   
 	</table>
 	
 
