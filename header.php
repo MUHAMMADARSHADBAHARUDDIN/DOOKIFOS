@@ -56,6 +56,7 @@
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="testProfile.php">Profile</a>
 								<a class="dropdown-item" href="cart.php">Cart</a>
+								<a class="dropdown-item" href="view_orderC.php">View Order</a>
 								<a class="dropdown-item" href="logout.php" onclick="return confirm('Are you sure you want to logout?');">Log Out</a>
 							</div>
 						</li>

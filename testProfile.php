@@ -80,7 +80,7 @@ function myFunction() {
 											<input type="checkbox" onclick="myFunction()">Show Password
 										</div>
 										<div class="form-group">
-											Phone Number <input type="tel" name="tel" class="form-control" value="'.$row['tel'].'">
+											Phone Number <input type="tel" name="tel"  class="form-control" value="'.$row['tel'].'">
 										</div>
 
 										<div class="form-group">
