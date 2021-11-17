@@ -1,12 +1,26 @@
 <?php session_start();
 include "header.php";
+$price = $_POST['total'];
+ 
 ?>
 <div style="height: 150px;"></div>
 <div style="width: 80%; margin: 0 auto;">
 		<div style="width: 50%; margin: 0 auto;">		
-<?php include  "connect.php"; ?>
+<?php include  "connect.php"; 
+if(isset($_SESSION['uid']))
+{
+	$uid = $_SESSION['uid'];
+	$s= mysqli_query($con,"select * from registration where userid='$uid'");
+	while($r = mysqli_fetch_array($s))
+	{
+		$email = $r['email'];
+		$phone = $r['tel'];	
+		$address = $r['address'];	
+  	}
 
-	<form action="order.php" method="post">
+}
+?>
+	<form action="GenerateGatewayPaymentCall.php" method="post">
 
 		<table align="center" border="1" cellspacing="14" cellpadding="12" style="width: 100%">
           <tr>
@@ -15,27 +29,39 @@ include "header.php";
             </tr>
 			    <tr align="center">
 			    	<td style="color: red">  Enter your name  <br>
-			        <input type="text" name="nm" placeholder="Enter your name" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="[a-z,A-Z]*"></td>			    		
+			        <input type="text" name="nm" value = "<?php echo $uid; ?>" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="[a-z,A-Z]*"></td>			    		
 			    </tr>
 
 			    <tr align="center">
 			    	<td style="color: red">   Enter Mobile no <br>
-			        <input type="no" name="mo" placeholder="Enter Mobile no" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="\d{10}"></td>
+			        <input type="no" name="mo" value = "<?php echo $phone; ?>" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="\d{10}"></td>
 			    </tr>
 
 			    <tr align="center">
 			    	<td style="color: red">   Enter Email address <br>
-			        <input type="Email" name="em" placeholder="Enter email address" style="width: 100%; padding: 10px; color: orange; background-color: black" required=""></td>
+			        <input type="Email" name="em" value = "<?php echo $email; ?>" style="width: 100%; padding: 10px; color: orange; background-color: black" required=""></td>
 			    </tr>
 
                 <tr align="center">
                 	<td style="color: red"> Enter address <br>
-                 <input type="text" name="ad" placeholder="enter your address" style="width: 100%; padding: 50px; color: orange; background-color: black">
+                 <input type="text" name="ad" value = "<?php echo $address; ?>"  style="width: 100%; padding: 50px; color: orange; background-color: black">
                 </tr>	
 
                 <tr align="center">
-                	<td colspan="4" > <input type="submit" name="s" value="Confirm Order" style="height: 50px; background-color:lightgreen; color: black; padding: 10px; width: 30%;"> </td>              	
+                	<td colspan="4" > <input type="submit" name="s" value="Confirm Order" style="height: 50px; background-color:lightgreen; color: black; padding: 10px; width: 30%;"> </td>
+
+
+
+</form>
+            	
                 </tr>
+
+
+			
+			
+
+			
+
 
                 		    </table>	
 			</form>

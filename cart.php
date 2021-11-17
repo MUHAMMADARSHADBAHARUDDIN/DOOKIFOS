@@ -20,6 +20,7 @@
 	<br>
 	<div>
 		<?php include "connect.php";
+		$grantTotal = 0;
 			$s = mysqli_query($con,"SELECT addcart.price, addcart.qty, addcart.total,addcart.id, menu.image
 FROM addcart
 INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
@@ -34,6 +35,7 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 		<?php
 			while($r = mysqli_fetch_array($s))
 			{
+				$grantTotal = $grantTotal + $r['total'];
 		 ?>
 			<tr>
 				<td align="right"><img src="admin/<?php echo $r['image']; ?>" width=100 height=100></td>
@@ -41,11 +43,21 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 				<td><?php echo $r['qty']; ?></td>
 				<td><?php echo $r['total']; ?></td>
 				<td><a href="deletecart.php?id=<?php echo $r['id']; ?>">Delete</a></td>
-			</tr>		
+			</tr>	
+				
 		<?php
 		}
 		?>
-		</table>	
+		</table>
+		<tr align="Right">
+			    	<td style="color: Black">   Grant Total </td>
+			        <td> <input type="hidden" name="gTotal"value="<?php echo $grantTotal; ?>"><?php echo $grantTotal; ?></td>
+			    </tr>
+		<?php
+
+			mysqli_query($con,"insert into tempTotal(tTotal) values('$grantTotal')");
+		?>
+
 		<div style="width: 90%; padding: 20px; text-align: right;">
 			<a href="checkout.php"><img src="images/chcekout.png" width="40"></a>
 			<a href="checkout.php">Check Out</a> 

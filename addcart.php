@@ -37,7 +37,7 @@
 			    </tr>
 				    <tr align="center">
 			    	<td style="color: red">   QTY</td>
-			        <td> <input type="number" name="qty" value="" min=1 max=10 required></td>
+			        <td> <input type="number" name="qty" value="1" min=1 max=10 required></td>
 			    </tr>
 
                 <tr align="center">
@@ -52,7 +52,9 @@
 				$uid = $_POST['uid'];
 				$price = $_POST['price'];
 				$qty = $_POST['qty'];
-				$total  = $price*$qty;
+				$total = $price * $qty;
+				//$totalPrice += $total;
+				
 
 				include "connect.php";
 				mysqli_query($con,"insert into addcart(p_id,u_id,price,qty,total ) values('$pid','$uid','$price','$qty','$total')") or die(mysqli_error($con));
