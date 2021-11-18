@@ -25,11 +25,11 @@
 		      <a href="registration.php"> New User?</a></td>
 		 </tr>
 		<tr>
-             <td> enter your user id </td>
+             <td> Enter User ID </td>
         <td> <input type="text" name="uid" placeholder="Enter Your User ID" style="padding: 10px; width: 150%"> <br>  </td>		
 		</tr>
 		<tr>
-           <td> enter your password</td>
+           <td> Enter Password</td>
  <td> <input type="Password" name="pass" placeholder="Enter Your Password" style="padding: 10px; width: 150%"> <br>   </td>		
 		</tr>		
 		<tr>	    

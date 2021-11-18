@@ -35,15 +35,16 @@
    <td> Current Category</td>
    <td><input type="text" name="curCat" value="'.$foodRecord['category'].'" placeholder="" class="text" required></td>
    </tr> 
-     <tr align="center">   
-          <td>Choose Food Category</td>
-          <td>
-          <select class="text" name="cat" value="'.$foodRecord['category'].'">
-					<option value="mainmenu">Main Menu</option>
-					<option value="sidemenu">Side Menu</option>
-					<option value="beverages">Beverages</option>
-				</select>
-   	    </td>
+   <tr align="center">   
+   <td>Choose Food Category</td>
+   <td>
+   <select class="text" name="cat" value="'.$foodRecord['category'].'">
+   			 <option value="" disabled selected>Choose option</option>
+			 <option value="mainmenu">Main Menu</option>
+			 <option value="sidemenu">Side Menu</option>
+			 <option value="beverages">Beverages</option>
+		 </select>
+	</td>
    	   <tr align="center">
    	   	    <td> Enter Title</td>
    	   	    <td><input type="text" name="title" value="'.$foodRecord['title'].'" placeholder="" class="text" required></td>

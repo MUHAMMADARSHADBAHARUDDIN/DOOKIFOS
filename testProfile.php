@@ -67,13 +67,13 @@ function myFunction() {
 											<img src="'.$row['profile'].'" height="150" width="125">
 										</div>
 										<div class="form-group">
-										<input type="hidden" name="uID" class="form-control" value="'.$row['id'].'">
+										<input type="hidden" name="uID" class="form-control" value="'.$row['id'].'" >
 										</div>
 										<div class="form-group">
-											Username <input type="text" name="updateusername" class="form-control" value="'.$row['userid'].'">
+											Username <input type="text" name="updateusername" class="form-control" value="'.$row['userid'].'" readonly>
 										</div>
 										<div class="form-group">
-											Email <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" >
+											Email <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" readonly>
 										</div>
 										<div class="form-group">
 											Password <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'" >
@@ -125,42 +125,43 @@ function myFunction() {
 							echo"<script>alert('Pls ensure all field is not blank!');</script>";
 						}
 						else { 
-						$uID = $_POST['uID'];
-						$updateusername = $_POST['updateusername'];
-						$useremail = $_POST['useremail'];
-						$userpassword = $_POST['userpassword'];
-						$date = $_POST['date'];
-						$address = $_POST['address'];
-						$tel = $_POST['tel'];
-						$i = "profileC/".$_FILES['picture']['name'];
-						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
+							$uID = $_POST['uID'];
+							$updateusername = $_POST['updateusername'];
+							$useremail = $_POST['useremail'];
+							$userpassword = $_POST['userpassword'];
+							$date = $_POST['date'];
+							$address = $_POST['address'];
+							$tel = $_POST['tel'];
+							$i = "profileC/".$_FILES['picture']['name'];
+							move_uploaded_file($_FILES['picture']['tmp_name'], $i);
 
-						if ($_FILES['picture']['size'] == 0) {
-							$sql= 'update registration 
-							set  userid = "'.$updateusername.'",
-								password ="'.$userpassword.'", 
-								email="'.$useremail.'",
-								date="'.$date.'",
-								address="'.$address.'",
-								tel="'.$tel.'"
-							where id = "'.$uID.'"';
-						}
-						else {
-							$sql= 'update registration 
-							set  userid = "'.$updateusername.'",
-								password ="'.$userpassword.'", 
-								email="'.$useremail.'",
-								date="'.$date.'",
-								address="'.$address.'",
-								tel="'.$tel.'", 
-								profile="'.$i.'"
-							where id = "'.$uID.'"';		
-						}
+							if ($_FILES['picture']['size'] == 0) {
+								$sql= 'update registration 
+								set  userid = "'.$updateusername.'",
+									password ="'.$userpassword.'", 
+									email="'.$useremail.'",
+									date="'.$date.'",
+									address="'.$address.'",
+									tel="'.$tel.'"
+								where id = "'.$uID.'"';
+							}
+							else {
+								$sql= 'update registration 
+								set  userid = "'.$updateusername.'",
+									password ="'.$userpassword.'", 
+									email="'.$useremail.'",
+									date="'.$date.'",
+									address="'.$address.'",
+									tel="'.$tel.'", 
+									profile="'.$i.'"
+								where id = "'.$uID.'"';		
+							}
 						echo $sql;
 						if (mysqli_query($con, $sql)) {
-							echo "Record updated successfully";
+							echo "<script>alert('Record updated successfully');</script>";
 						} else {
-							echo "Error updating record: " . mysqli_error($con);
+							$eMessage = "Error updating record: " . mysqli_error($con);
+							echo "<script>alert($eMessage);</script>";
 						}			   	  
 		            mysqli_close($con);
 					session_destroy();

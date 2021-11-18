@@ -41,6 +41,7 @@ function showUser(str) {
    		<td>Choose Food Category</td>
    	    <td> 
    	    	<select class="text" name="cat" onchange="showUser(this.value)">
+			   <option value="" disabled selected>Choose option</option>
    	    		<option value="mainmenu">Main Menu</option>
    	    		<option value="sidemenu">Side Menu</option>
    	    		<option value="beverages">Beverages</option>
