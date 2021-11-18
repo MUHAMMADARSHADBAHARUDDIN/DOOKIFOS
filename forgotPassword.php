@@ -43,7 +43,7 @@
 					if(isset($_POST['forgotPassword'])){
                         $email = $_POST['email'];
 						$sql = 'SELECT password FROM registration WHERE email= "'.$email.'"';
-                        $result = mysqli_query($conn, $sql);
+                        $result = mysqli_query($con, $sql);
 						if (mysqli_num_rows($result) > 0) {
 							while($row = mysqli_fetch_assoc($result)) {
 								$pass = "Your password is '" . $row["password"] . "'";
