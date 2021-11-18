@@ -30,13 +30,13 @@
  </table>
 					<?php
 					$servername = "localhost";
-					$username = "root";
-					$password = "";
-					$dbname = "dookki_db";
+					$username = "dookkifo_server";
+					$password = "DookkiMyG4";
+					$dbname = "dookkifo_dookki_db";
                     include "mail.php";
 
-                    $con = mysqli_connect('localhost','dookkifo_server','DookkiMyG4','dookkifo_dookki_db');
-                    if (!$conn) {
+                    $con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
+                    if (!$con) {
                     die("Connection failed: " . mysqli_connect_error());
                     }
                    
