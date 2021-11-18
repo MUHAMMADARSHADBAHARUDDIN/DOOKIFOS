@@ -36,7 +36,7 @@
                     include "mail.php";
 
                     $con = mysqli_connect('localhost','dookkifo_server','DookkiMyG4','dookkifo_dookki_db');
-                    if (!$conn) {
+                    if (!$con) {
                     die("Connection failed: " . mysqli_connect_error());
                     }                  
 					if(isset($_POST['forgotPassword'])){
