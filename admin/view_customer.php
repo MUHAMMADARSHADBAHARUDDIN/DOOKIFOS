@@ -47,7 +47,7 @@
 			<tr>
 				<!--<th>Database ID</th>-->
 				
-				<th>USER ID</th>
+				<th>USERNAME</th>
 				<th>EMAIL</th>
 				<th>TELEPHONE</th>
 				<th>ADDRESS</th>
