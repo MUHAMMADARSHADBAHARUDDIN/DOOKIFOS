@@ -1,6 +1,7 @@
 <?php session_start();
 $u = $_POST['uid'];
 $p = $_POST['pass'];
+$p = md5($p);
 include  "connect.php";
 $s = mysqli_query($con,"select * from admin where adminid='$u' and password='$p'");
 

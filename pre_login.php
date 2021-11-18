@@ -34,8 +34,8 @@
 <p>
 
 </p>
-<p><a href="admin_login.php" class="button">Admin Login</a></p>
-<p><a href="login.php" class="button">Customer Login</a></p>
+<p><a href="https://dookkifosmy.com/admin_login.php" class="button">Admin Login</a></p>
+<p><a href="https://dookkifosmy.com/login.php" class="button">Customer Login</a></p>
 </body>
 </html>
 <?php include "footer.php"; ?>
