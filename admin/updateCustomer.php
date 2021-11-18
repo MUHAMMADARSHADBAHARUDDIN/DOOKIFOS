@@ -57,20 +57,21 @@ function myFunction() {
 				<?php
 				 $customerId = $_POST['customerIdToUpdate'];
                  $customerQry = getCustomerInformation($customerId);
-                 $customerRecord = mysqli_fetch_assoc($customerQry); 
+                 $customerRecord = mysqli_fetch_assoc($customerQry);
+				 $imagePath = "../" . $customerRecord['profile']; 
 								echo'
 									<div class="col-md-6">
 										<div class="form-group">
-											<img src="'.$customerRecord['profile'].'" height="150" width="125">
+										<img src= '.$imagePath.' height="150" width="125">
 										</div>
 										<div class="form-group">
 										<input type="hidden" name="uID" class="form-control" value="'.$customerRecord['id'].'">
 										</div>
 										<div class="form-group">
-											Username <input type="text" name="updateusername" class="form-control" value="'.$customerRecord['userid'].'" required>
+											Username <input type="text" name="updateusername" class="form-control" value="'.$customerRecord['userid'].'" required readonly>
 										</div>
 										<div class="form-group">
-											Email <input type="email" name="useremail" class="form-control" value="'.$customerRecord['email'].'" required>
+											Email <input type="email" name="useremail" class="form-control" value="'.$customerRecord['email'].'" required readonly>
 										</div>
 										
 										<div class="form-group">
