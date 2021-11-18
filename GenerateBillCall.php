@@ -36,7 +36,7 @@ if ($billpaymentStatus == 1) {
   $dateToday = date("Y-m-d");
 
   //update database table
-  $sql = "INSERT INTO userpayment (transactionID, userID, email, phoneNumber, price) 
+  $sql = "INSERT INTO userpayment (transactionID, userid, email, phoneNumber, price) 
       VALUES ('$billpaymentInvoiceNo', '$userID', '$billEmail', '$billPhone', '$billpaymentAmount')";
 
   //check if sql success
@@ -47,7 +47,7 @@ if ($billpaymentStatus == 1) {
       echo "Error: " . $sql . "<br>" . $con->error;
     }
   } else if ($billpaymentStatus == 3) {
-    header("Location:../../../Alerts/unsuccessPayment.php");
+    header("Location:unsuccessPayment.php");
 
   } else{
     echo "pending";

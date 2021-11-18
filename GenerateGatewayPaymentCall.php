@@ -22,13 +22,13 @@ if(isset($_SESSION['uid']))
 }
 
 $totalPrice = 0;
-$sql = "SELECT * FROM tempTotal";
+$sql = "SELECT * FROM temptotal";
 $s = mysqli_query($con,$sql);
 while($tP = mysqli_fetch_array($s))
 {
   $totalPrice = $tP['tTotal'];
 }
-mysqli_query($con,"DELETE from tempTotal");
+mysqli_query($con,"DELETE from temptotal");
 
 $name = $_POST['nm'];
 $email = $_POST['em'];
@@ -43,7 +43,7 @@ $some_data = array(
   'billPriceSetting' => 1,
   'billPayorInfo' => 1,
   'billAmount' => $totalPrice,
-  'billReturnUrl' => 'http://localhost/masterdookifos/GenerateBillCall.php',
+  'billReturnUrl' => 'https://dookkifosmy.com/GenerateBillCall.php',
   'billCallbackUrl' => '',
   'billExternalReferenceNo' => '',
   'billTo' => $name,

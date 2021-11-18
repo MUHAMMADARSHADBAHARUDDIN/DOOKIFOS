@@ -1,7 +1,7 @@
 <?php
 function getListOfCustomer()
 {
- $con = mysqli_connect("localhost","root","","dookki_db");
+	$con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
 	if(!$con)
 		{
 		echo mysqli_error();
@@ -15,7 +15,7 @@ function getListOfCustomer()
 }
 function searchByCustomerId()
 {
-$con = mysqli_connect("localhost","root","","dookki_db");
+	$con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
 	if(!$con)
 		{
 		echo mysqli_error();
@@ -33,7 +33,7 @@ $con = mysqli_connect("localhost","root","","dookki_db");
 }
 function searchByEmail()
 {
-$con = mysqli_connect('localhost','root','','dookki_db');
+	$con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
 	if(!$con)
 		{
 		echo mysqli_error();

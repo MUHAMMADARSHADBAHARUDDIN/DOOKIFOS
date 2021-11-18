@@ -55,7 +55,7 @@ INNER JOIN menu ON addcart.p_id=menu.id where addcart.u_id='$uid'");
 			    </tr>
 		<?php
 
-			mysqli_query($con,"insert into tempTotal(tTotal) values('$grantTotal')");
+			mysqli_query($con,"insert into temptotal(tTotal) values('$grantTotal')");
 		?>
 
 		<div style="width: 90%; padding: 20px; text-align: right;">

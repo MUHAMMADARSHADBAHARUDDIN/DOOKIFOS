@@ -54,7 +54,7 @@ function myFunction() {
 		<div class="col-md-8 offset-2">
 			<form method="post" action="" enctype="multipart/form-data">
 				<?php
-				$conn = mysqli_connect('localhost','root','','dookki_db');
+				$conn = mysqli_connect('localhost','dookkifo_server','DookkiMyG4','dookkifo_dookki_db');
 				$currentUser = $_SESSION['uid'];
 				$sql = "SELECT * FROM registration WHERE userid  = '$currentUser'";
 					$gotResults = mysqli_query($conn,$sql);
