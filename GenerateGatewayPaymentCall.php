@@ -36,8 +36,8 @@ $phoneNumber = $_POST['mo'];
 
 $totalPrice = ($totalPrice * 100);
 $some_data = array(
-  'userSecretKey' => 'ki4c7zci-duyo-xu9g-l95g-oa6bi5hr6ilh',
-  'categoryCode' => 'xyi66tql',
+  'userSecretKey' => 'gtxg6ga2-wrpk-mbn2-i385-eourwnnttysu',
+  'categoryCode' => 'aavo02xk',
   'billName' => 'Dookki',
   'billDescription' => 'Dookki Checkout',
   'billPriceSetting' => 1,

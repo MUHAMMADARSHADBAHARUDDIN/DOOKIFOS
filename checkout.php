@@ -29,7 +29,7 @@ if(isset($_SESSION['uid']))
             </tr>
 			    <tr align="center">
 			    	<td style="color: red">  Enter your name  <br>
-			        <input type="text" name="nm" value = "<?php echo $uid; ?>" style="width: 100%; padding: 10px; color: orange; background-color: black" required="" pattern="[a-z,A-Z]*"></td>			    		
+			        <input type="text" name="nm" value = "<?php echo $uid; ?>" style="width: 100%; padding: 10px; color: orange; background-color: black" required=""></td>			    		
 			    </tr>
 
 			    <tr align="center">

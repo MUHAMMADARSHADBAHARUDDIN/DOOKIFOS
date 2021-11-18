@@ -49,7 +49,7 @@
 				    $dbname = "dookki_db";
                     include "mail.php";
 
-                    $conn = mysqli_connect('localhost','root','','dookki_db');
+                    $conn = mysqli_connect('localhost','dookkifo_server','DookkiMyG4','dookkifo_dookki_db');
                     if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                     }
@@ -74,6 +74,7 @@
 					{						
 						$uid = $_POST['uid'];
 						$pass = $_POST['pass'];
+						$pass = md5($pass);
 						$email = $_POST['email'];
 						$code = $_POST['code'];	
 						
