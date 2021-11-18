@@ -111,7 +111,7 @@ function myFunction() {
 						$date = $_POST['date'];
 						$address = $_POST['address'];
 						$tel = $_POST['tel'];
-						$i = "../profileC".$_FILES['picture']['name'];
+						$i = "profileC".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
 
 						if ($_FILES['picture']['size'] == 0) {
