@@ -70,7 +70,7 @@ function myFunction() {
 											Email : <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" readonly>
 										</div>
 										<div class="form-group">
-											Password : <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'">
+											Password <input type="password" name="userpassword" class="form-control" id="myInput" value = "" placeholder = "Enter New Password">
 											<input type="checkbox" onclick="myFunction()">Show Password
 										</div>
 
@@ -88,7 +88,7 @@ function myFunction() {
 				 <?php
 				 if(isset($_POST['updateProfile']))
 				 {
-					 $con = mysqli_connect("localhost","root","","dookki_db");
+					 $con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
 					 if(!$con)
 						 {
 						 echo mysqli_error();

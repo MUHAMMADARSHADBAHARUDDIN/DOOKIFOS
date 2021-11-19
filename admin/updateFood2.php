@@ -38,7 +38,7 @@
    <tr align="center">   
    <td>Choose Food Category</td>
    <td>
-   <select class="text" name="cat" value="'.$foodRecord['category'].'">
+   <select class="text" name="cat" value="'.$foodRecord['category'].'" required>
    			 <option value="" disabled selected>Choose option</option>
 			 <option value="mainmenu">Main Menu</option>
 			 <option value="sidemenu">Side Menu</option>
@@ -72,7 +72,7 @@
 if(isset($_POST['UpdateFood']))
 {
 	echo "executed";
-	$con = mysqli_connect("localhost","root","","dookki_db");
+	$con = mysqli_connect("localhost","dookkifo_server","DookkiMyG4","dookkifo_dookki_db");
 	if(!$con)
 		{
 		echo mysqli_error();

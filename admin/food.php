@@ -80,7 +80,10 @@ if(isset($_POST['s']))
 		move_uploaded_file($_FILES['img']['tmp_name'], $i);
 		include "connect.php";
 		mysqli_query($con,"insert into menu (id,category,title,description,price,image) values('$fid','$cat','$title','$det','$price','$i')");
-		echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";	
+		//echo "<div style='text-align:center; font-size:1.3em; color:red;'>Data Addedd SuccessFully</div>";
+		$URL="view_food2.php";
+		echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+		echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';	
 }
 ?>	
 </div>

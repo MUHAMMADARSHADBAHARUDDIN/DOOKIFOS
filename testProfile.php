@@ -76,7 +76,7 @@ function myFunction() {
 											Email <input type="email" name="useremail" class="form-control" value="'.$row['email'].'" readonly>
 										</div>
 										<div class="form-group">
-											Password <input type="password" name="userpassword" class="form-control" id="myInput" value="'.$row['password'].'" >
+											Password <input type="password" name="userpassword" class="form-control" id="myInput" value = "" placeholder = "Enter New Password">
 											<input type="checkbox" onclick="myFunction()">Show Password
 										</div>
 										<div class="form-group">
@@ -120,15 +120,16 @@ function myFunction() {
 						$tel = $_POST['tel'];
 						$i = "profileC/".$_FILES['picture']['name'];
 						move_uploaded_file($_FILES['picture']['tmp_name'], $i);
-						if (($updateusername == NULL) || ($useremail == NULL) || ($userpassword == NULL) || ($date == NULL) || ($address == NULL) || ($tel == NULL))
+						if (($updateusername == NULL) || ($useremail == NULL) || ($useremail == NULL) || ($date == NULL) || ($address == NULL) || ($tel == NULL))
 						{
 							echo"<script>alert('Pls ensure all field is not blank!');</script>";
 						}
-						else { 
+						else {
 							$uID = $_POST['uID'];
 							$updateusername = $_POST['updateusername'];
 							$useremail = $_POST['useremail'];
 							$userpassword = $_POST['userpassword'];
+							$userpassword = md5($userpassword);
 							$date = $_POST['date'];
 							$address = $_POST['address'];
 							$tel = $_POST['tel'];

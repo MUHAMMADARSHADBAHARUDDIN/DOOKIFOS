@@ -26,7 +26,7 @@
 	<?php
 		$a = $_GET['a'];
 		mysqli_query($con,"DELETE from menu where id='$a'");
-		header("location:view_food.php");
+		header("location:view_food2.php");
 	?>		
 </div>
 <?php include "footer.php"; ?>

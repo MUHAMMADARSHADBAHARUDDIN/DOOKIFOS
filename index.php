@@ -123,7 +123,7 @@
 					<div id="reviews" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner mt-4">
 							<?php include "connect.php";
-							$s = mysqli_query($con,"select * from review  limit 4");	
+							$s = mysqli_query($con,"select * from review  limit 10");	
 							 while($r = mysqli_fetch_array($s))
 							 {
 							 ?>
