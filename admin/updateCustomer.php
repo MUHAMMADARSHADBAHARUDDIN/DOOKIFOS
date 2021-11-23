@@ -58,7 +58,7 @@ function myFunction() {
 				 $customerId = $_POST['customerIdToUpdate'];
                  $customerQry = getCustomerInformation($customerId);
                  $customerRecord = mysqli_fetch_assoc($customerQry);
-				 $imagePath = "../" . $customerRecord['profile']; 
+				 $imagePath = "../customer/" . $customerRecord['profile']; 
 								echo'
 									<div class="col-md-6">
 										<div class="form-group">

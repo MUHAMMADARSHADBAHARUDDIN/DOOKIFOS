@@ -68,7 +68,7 @@
 				<td><?php echo $s['tel']; ?></td>
 				<td><?php echo $s['address']; ?></td>
 				<td><?php echo $s['date']; ?></td>
-				<td><img src="../<?php echo $s['profile']; ?>" width=70 height=70></td>
+				<td><img src="../customer/<?php echo $s['profile']; ?>" width=70 height=70></td>
 				<td><form action="updateCustomer.php" method="POST">
 					<input type="hidden" name="customerIdToUpdate" value=<?php echo $s['userid'];?> >
 					<input type="submit"  value="UPDATE" class="update"name="updateCustomerButton">

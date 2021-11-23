@@ -97,7 +97,7 @@
 							{
 								if ($code==$rcode['tCode'])
 								{
-									mysqli_query($conn,"insert into registration(userid, password,email) values('$uid','$pass','$email')");
+									mysqli_query($conn,"insert into registration(userid, password,email) values('$uid',MD5('$pass'),'$email')");
 									echo "<script>alert('Registration SuccessFully');</script>";
 									mysqli_query($conn,"DELETE from tempcode");
 									$URL="login.php";
