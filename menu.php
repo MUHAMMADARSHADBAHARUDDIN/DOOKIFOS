@@ -39,7 +39,7 @@
 								?>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
+										<img src="../admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
@@ -73,7 +73,7 @@
 								?>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
+										<img src="../admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
@@ -106,7 +106,7 @@
 								?>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
+										<img src="../admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
@@ -140,7 +140,7 @@
 								?>
 								<div class="col-lg-4 col-md-6 special-grid drinks">
 									<div class="gallery-single fix">
-										<img src="admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
+										<img src="../admin/<?php echo $r['image']; ?>" class="img-fluid" alt="Image" style='width: 263px; height:170px;'>
 										<div class="why-text">
 											<h4><?php echo $r['title']; ?></h4>
 											<p><?php echo $r['description']; ?></p>
