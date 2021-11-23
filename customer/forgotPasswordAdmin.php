@@ -46,7 +46,7 @@
                         $result = mysqli_query($con, $sql);
 						if (mysqli_num_rows($result) > 0) {
 							while($row = mysqli_fetch_assoc($result)) {
-								$pass = "Your password is " . $row["password"] . "";
+								$pass = "You must decrypt your password for safety reasons at https://www.md5online.org/md5-decrypt.html. Your password is '" . $row["password"] . "'";
 								emailForgotPassword("mikhail.shahmie@gmail.com", $email, "Forgot Password", $pass);
 								}
 							}
