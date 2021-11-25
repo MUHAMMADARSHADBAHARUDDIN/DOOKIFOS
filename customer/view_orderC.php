@@ -71,7 +71,9 @@
 			{
 				?>
 				<td><?php echo $m['title']; ?></td>
+				<?php
 			}
+			?>
 			<td><?php echo $r['qty']; ?></td>
 			<td><?php echo $r['total']; ?></td>
 			<?php
@@ -87,7 +89,7 @@
 					<?php 
 					}
 		}	
-	}
+	
 		?>
 		   
 	</table>
